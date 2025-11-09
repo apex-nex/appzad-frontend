@@ -1,126 +1,38 @@
-# Portfolio Website
-
-A modern, dynamic Next.js portfolio website with internationalization (i18n) support and admin panel capabilities.
-
-## Features
-
-- 🌍 **Internationalization**: Support for multiple languages (English/French)
-- 📱 **Responsive Design**: Fully responsive with Tailwind CSS
-- 🚀 **Modern Stack**: Built with Next.js 15, TypeScript, and App Router
-- 🎨 **UI Components**: Custom UI components with consistent design
-- 📝 **Dynamic Content**: API routes for managing projects and portfolio data
-- 🔍 **SEO Optimized**: Server-side rendering and meta tags
-- 📊 **Admin Ready**: API endpoints for content management
-
-## Tech Stack
-
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Internationalization**: next-intl
-- **UI Components**: Custom components with Tailwind
-- **Icons**: Lucide React
-
-## Project Structure
-
-```
-portfolio/
-├── app/
-│   ├── _components/          # Page-specific components
-│   ├── [lang]/              # i18n dynamic routes
-│   │   ├── (main)/          # Main pages (home, about)
-│   │   ├── projects/        # Project pages
-│   │   │   └── [slug]/      # Dynamic project pages
-│   │   ├── layout.tsx       # Root layout
-│   │   └── not-found.tsx    # 404 page
-│   └── api/                 # API routes
-│       └── projects/        # Project management APIs
-├── components/              # Reusable UI components
-│   ├── ui/                 # Base UI components
-│   └── icons/              # SVG icon components
-├── content/                # Static content (MDX files)
-├── hooks/                  # Custom React hooks
-├── i18n/                   # Translation files
-├── lib/                    # Utilities and configurations
-├── types/                  # TypeScript type definitions
-└── public/                 # Static assets
-```
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd portfolio
-   ```
+First, run the development server:
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Visit the application**
-   - English: http://localhost:3000/en
-   - French: http://localhost:3000/fr
-
-## API Endpoints
-
-### Projects API
-
-- `GET /api/projects` - Get all projects
-- `POST /api/projects` - Create a new project
-- `GET /api/projects/[id]` - Get project by ID
-- `PUT /api/projects/[id]` - Update project
-- `DELETE /api/projects/[id]` - Delete project
-
-## Development
-
-### Adding New Languages
-
-1. Add the locale to `lib/i18n.ts`
-2. Create a new translation file in `i18n/`
-3. Update the middleware configuration
-
-### Creating New Pages
-
-Pages should be created inside the `app/[lang]/` directory to support internationalization.
-
-### Adding New API Routes
-
-Create new API routes in the `app/api/` directory following RESTful conventions.
-
-## Deployment
-
-The application can be deployed on any platform that supports Next.js:
-
-- **Vercel** (recommended)
-- **Netlify**
-- **Railway**
-- **Self-hosted**
-
-## Environment Variables
-
-Create a `.env.local` file for local development:
-
-```env
-# Add your environment variables here
-# DATABASE_URL=your_database_url
-# NEXTAUTH_SECRET=your_secret_key
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-## Contributing
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## License
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-This project is open source and available under the [MIT License](LICENSE).
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
