@@ -1,0 +1,93 @@
+{
+  "leadership": [
+    {
+      "id": "1",
+      "name": "Mohammad Adnan",
+      "role": "Founder & Lead Developer",
+      "bio": "With over 3 years of experience in software engineering, Adnan leads AppZad's technical vision and client relationships. Specialized in building scalable web applications for the travel and hospitality industries.",
+      "image": "/team/adnan.jpg",
+      "email": "adnan@appzad.com",
+      "linkedin": "https://www.linkedin.com/in/mdadnanengg",
+      "github": "https://github.com/mdadnanengg",
+      "skills": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "System Architecture"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "id": "2",
+      "name": "Sarah Johnson",
+      "role": "Senior UI/UX Designer",
+      "bio": "Sarah brings 5 years of design expertise, specializing in creating intuitive interfaces for healthcare and wellness platforms.",
+      "image": "/team/sarah.jpg",
+      "skills": [
+        "UI/UX Design",
+        "Figma",
+        "Adobe XD",
+        "User Research",
+        "Prototyping"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Rajesh Kumar",
+      "role": "Full Stack Developer",
+      "bio": "Rajesh specializes in building robust backend systems and APIs for travel booking platforms and hotel management systems.",
+      "image": "/team/rajesh.jpg",
+      "skills": [
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "AWS",
+        "API Development"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Emily Chen",
+      "role": "Frontend Developer",
+      "bio": "Emily focuses on creating pixel-perfect, responsive interfaces with a keen eye for performance optimization.",
+      "image": "/team/emily.jpg",
+      "skills": [
+        "React",
+        "Vue.js",
+        "CSS",
+        "Animation",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Michael Brown",
+      "role": "Project Manager",
+      "bio": "Michael ensures smooth project delivery and client communication, with expertise in Agile methodologies.",
+      "image": "/team/michael.jpg",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "Client Relations",
+        "Project Planning",
+        "Team Leadership"
+      ]
+    }
+  ],
+  "openPositions": [
+    {
+      "title": "Senior React Developer",
+      "type": "Full-time",
+      "location": "Remote",
+      "description": "We're looking for an experienced React developer to join our growing team."
+    },
+    {
+      "title": "DevOps Engineer",
+      "type": "Full-time",
+      "location": "Hybrid",
+      "description": "Help us build and maintain scalable infrastructure for our client projects."
+    }
+  ]
+}

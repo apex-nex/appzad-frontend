@@ -1,0 +1,118 @@
+{
+  "name": "AppZad",
+  "tagline": "Building Digital Experiences That Drive Results",
+  "description": "AppZad is a professional web development agency specializing in creating cutting-edge websites and web applications for the Travel, Health, and Hotel industries. We transform your vision into powerful digital solutions that engage customers and grow your business.",
+  "mission": "To empower businesses in the Travel, Health, and Hotel sectors with innovative web solutions that enhance customer experiences and drive measurable growth.",
+  "vision": "To become the leading digital partner for businesses seeking to excel in the digital landscape through exceptional web development and user-centric design.",
+  "founded": "2023",
+  "location": "Hyderabad, Telangana, India",
+  "employees": "10-50",
+  "email": "hello@appzad.com",
+  "phone": "+91-8421145620",
+  "address": "Hyderabad, Telangana, India",
+  "socialMedia": {
+    "linkedin": "https://www.linkedin.com/company/appzad",
+    "github": "https://github.com/appzad",
+    "twitter": "https://twitter.com/appzad"
+  },
+  "values": [
+    {
+      "title": "Client-Centric",
+      "description": "We put our clients at the heart of everything we do, ensuring their success is our success."
+    },
+    {
+      "title": "Innovation",
+      "description": "We stay ahead of the curve by embracing the latest technologies and best practices in web development."
+    },
+    {
+      "title": "Quality",
+      "description": "We deliver pixel-perfect, high-performance solutions that exceed expectations."
+    },
+    {
+      "title": "Transparency",
+      "description": "We maintain open communication throughout the entire development process."
+    }
+  ],
+  "industries": [
+    {
+      "name": "Travel",
+      "icon": "✈️",
+      "description": "Booking platforms, tour operators, travel agencies, and destination websites",
+      "features": [
+        "Custom booking systems",
+        "Multi-currency support",
+        "Real-time availability",
+        "Payment gateway integration",
+        "Mobile-responsive design"
+      ]
+    },
+    {
+      "name": "Health",
+      "icon": "🏥",
+      "description": "Healthcare providers, telemedicine platforms, wellness centers, and medical portals",
+      "features": [
+        "HIPAA-compliant solutions",
+        "Patient portals",
+        "Appointment scheduling",
+        "Electronic health records integration",
+        "Secure data handling"
+      ]
+    },
+    {
+      "name": "Hotel",
+      "icon": "🏨",
+      "description": "Hotels, resorts, vacation rentals, and hospitality management systems",
+      "features": [
+        "Online reservation systems",
+        "Room inventory management",
+        "Guest experience platforms",
+        "Channel manager integration",
+        "Revenue optimization tools"
+      ]
+    }
+  ],
+  "stats": [
+    {
+      "number": "50+",
+      "label": "Projects Delivered"
+    },
+    {
+      "number": "30+",
+      "label": "Happy Clients"
+    },
+    {
+      "number": "99%",
+      "label": "Client Satisfaction"
+    },
+    {
+      "number": "24/7",
+      "label": "Support Available"
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Industry Expertise",
+      "description": "Deep understanding of Travel, Health, and Hotel industry requirements and best practices."
+    },
+    {
+      "title": "Modern Technology Stack",
+      "description": "We use cutting-edge technologies like React, Next.js, and TypeScript for optimal performance."
+    },
+    {
+      "title": "Responsive Design",
+      "description": "All our solutions are fully responsive and optimized for mobile, tablet, and desktop."
+    },
+    {
+      "title": "SEO Optimized",
+      "description": "Built-in SEO best practices to help your website rank higher in search results."
+    },
+    {
+      "title": "Fast Delivery",
+      "description": "Agile development process ensures timely delivery without compromising quality."
+    },
+    {
+      "title": "Ongoing Support",
+      "description": "We provide continuous support and maintenance to keep your website running smoothly."
+    }
+  ]
+}

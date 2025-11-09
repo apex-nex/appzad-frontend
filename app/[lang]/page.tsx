@@ -2,7 +2,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { LocaleParams } from '@/types';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import resumeData from '@/data/resume.json';
+import companyData from '@/data/company.json';
 
 // Dynamic imports for animation components
 const FadeIn = dynamic(() => import('@/components/animations/fade-in').then(mod => ({ default: mod.FadeIn })));
@@ -19,7 +19,13 @@ const Briefcase = dynamic(() => import('lucide-react').then(mod => ({ default: m
 const Zap = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Zap })));
 const Smartphone = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Smartphone })));
 const Sparkles = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Sparkles })));
-const Download = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Download })));
+const FileText = dynamic(() => import('lucide-react').then(mod => ({ default: mod.FileText })));
+const Plane = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Plane })));
+const Heart = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Heart })));
+const Hotel = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Hotel })));
+const Users = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Users })));
+const Award = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Award })));
+const Headphones = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Headphones })));
 
 export default async function HomePage({ params }: { params: Promise<LocaleParams> }) {
   const { lang } = await params;
@@ -50,16 +56,16 @@ export default async function HomePage({ params }: { params: Promise<LocaleParam
             <ScaleIn delay={0.4}>
               <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium shadow-soft" style={{ background: 'var(--gradient-secondary)', color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>
                 <Rocket className="w-4 h-4" />
-                {resumeData.personal.title}
+                {t('badge')}
               </span>
             </ScaleIn>
           </div>
         </FadeIn>
         <FadeIn delay={0.6} direction="up">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl relative" style={{ color: 'var(--color-text)' }}>
-            Hi, I&apos;m{' '}
+            {t('title')}{' '}
             <span className="animate-pulse" style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-              {resumeData.personal.name}
+              {t('titleHighlight')}
             </span>
             <div className="absolute -inset-1 rounded-lg blur-xl -z-10" style={{ background: 'var(--gradient-primary)', opacity: 0.3 }}></div>
           </h1>
@@ -67,8 +73,7 @@ export default async function HomePage({ params }: { params: Promise<LocaleParam
 
         <FadeIn delay={0.8} direction="up">
           <p className="mt-6 text-lg leading-8 max-w-3xl mx-auto font-medium" style={{ color: 'var(--color-muted)' }}>
-            Software Engineer with 2+ years of experience building high-performance web applications.
-            Specializing in React, Vue.js, Next.js, and TypeScript to deliver scalable solutions.
+            {t('subtitle')}
           </p>
         </FadeIn>
 
@@ -120,7 +125,7 @@ export default async function HomePage({ params }: { params: Promise<LocaleParam
           <StaggerItem>
             <HoverCard scaleOnHover={1.05}>
               <Link
-                href={`/${lang}/resume`}
+                href={`/${lang}/schedule`}
                 className="group relative inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-bold shadow-lg hover:shadow-xl overflow-hidden transition-all duration-500 border-2"
                 style={{
                   borderColor: 'var(--color-accent)',
@@ -130,7 +135,7 @@ export default async function HomePage({ params }: { params: Promise<LocaleParam
               >
                 <span className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500"></span>
                 <span className="relative flex items-center gap-2">
-                  <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                  <FileText className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                   {t('cta.downloadResume')}
                 </span>
               </Link>
@@ -198,6 +203,133 @@ export default async function HomePage({ params }: { params: Promise<LocaleParam
           </HoverCard>
         </StaggerItem>
       </StaggerContainer>
+
+      {/* Company Stats */}
+      <FadeIn delay={2.0} direction="up">
+        <div className="mt-32">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold sm:text-4xl" style={{ color: 'var(--color-text)' }}>
+              {companyData.name} <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', color: 'transparent' }}>in Numbers</span>
+            </h2>
+          </div>
+          <StaggerContainer className="grid grid-cols-2 gap-8 sm:grid-cols-4" staggerDelay={0.1}>
+            {companyData.stats.map((stat, index) => (
+              <StaggerItem key={index}>
+                <HoverCard scaleOnHover={1.05}>
+                  <div className="text-center p-6 rounded-2xl" style={{ background: 'var(--gradient-card)' }}>
+                    <div className="text-4xl font-bold mb-2" style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
+                      {stat.number}
+                    </div>
+                    <div className="text-sm font-medium" style={{ color: 'var(--color-muted)' }}>
+                      {stat.label}
+                    </div>
+                  </div>
+                </HoverCard>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </FadeIn>
+
+      {/* Industries We Serve */}
+      <FadeIn delay={2.2} direction="up">
+        <div className="mt-32">
+          <div className="text-center mb-4">
+            <ScaleIn delay={2.3}>
+              <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium shadow-soft" style={{ background: 'var(--gradient-secondary)', color: 'var(--color-primary)' }}>
+                <Briefcase className="w-4 h-4" />
+                {t('industries.badge')}
+              </span>
+            </ScaleIn>
+          </div>
+          <h2 className="text-center text-3xl font-bold sm:text-4xl mb-16" style={{ color: 'var(--color-text)' }}>
+            {t('industries.title')}{' '}
+            <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
+              {t('industries.titleHighlight')}
+            </span>
+          </h2>
+
+          <StaggerContainer className="grid grid-cols-1 gap-8 sm:grid-cols-3" staggerDelay={0.15}>
+            <StaggerItem>
+              <HoverCard scaleOnHover={1.05} rotateOnHover={2}>
+                <div className="group h-full p-8 rounded-2xl transition-all duration-300 hover:shadow-strong" style={{ background: 'var(--gradient-card)' }}>
+                  <div className="flex items-center justify-center mb-6">
+                    <div className="h-16 w-16 rounded-2xl flex items-center justify-center shadow-medium group-hover:scale-110 transition-transform duration-300" style={{ background: 'var(--gradient-primary)' }}>
+                      <Plane className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4" style={{ color: 'var(--color-text)' }}>
+                    {t('industries.travel.title')}
+                  </h3>
+                  <p className="text-center font-medium" style={{ color: 'var(--color-muted)' }}>
+                    {t('industries.travel.description')}
+                  </p>
+                </div>
+              </HoverCard>
+            </StaggerItem>
+
+            <StaggerItem>
+              <HoverCard scaleOnHover={1.05} rotateOnHover={-2}>
+                <div className="group h-full p-8 rounded-2xl transition-all duration-300 hover:shadow-strong" style={{ background: 'var(--gradient-card)' }}>
+                  <div className="flex items-center justify-center mb-6">
+                    <div className="h-16 w-16 rounded-2xl flex items-center justify-center shadow-medium group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: 'var(--color-accent)' }}>
+                      <Heart className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4" style={{ color: 'var(--color-text)' }}>
+                    {t('industries.health.title')}
+                  </h3>
+                  <p className="text-center font-medium" style={{ color: 'var(--color-muted)' }}>
+                    {t('industries.health.description')}
+                  </p>
+                </div>
+              </HoverCard>
+            </StaggerItem>
+
+            <StaggerItem>
+              <HoverCard scaleOnHover={1.05} rotateOnHover={2}>
+                <div className="group h-full p-8 rounded-2xl transition-all duration-300 hover:shadow-strong" style={{ background: 'var(--gradient-card)' }}>
+                  <div className="flex items-center justify-center mb-6">
+                    <div className="h-16 w-16 rounded-2xl flex items-center justify-center shadow-medium group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: 'var(--color-secondary)' }}>
+                      <Hotel className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4" style={{ color: 'var(--color-text)' }}>
+                    {t('industries.hotel.title')}
+                  </h3>
+                  <p className="text-center font-medium" style={{ color: 'var(--color-muted)' }}>
+                    {t('industries.hotel.description')}
+                  </p>
+                </div>
+              </HoverCard>
+            </StaggerItem>
+          </StaggerContainer>
+        </div>
+      </FadeIn>
+
+      {/* CTA Section */}
+      <FadeIn delay={2.6} direction="up">
+        <div className="mt-32 text-center p-12 rounded-3xl" style={{ background: 'var(--gradient-hero)' }}>
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+            Ready to Transform Your Digital Presence?
+          </h2>
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how we can help your business succeed online
+          </p>
+          <HoverCard scaleOnHover={1.05}>
+            <Link
+              href={`/${lang}/contact`}
+              className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-bold bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
+              style={{ color: 'var(--color-primary)' }}
+            >
+              Get Started Today
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </HoverCard>
+        </div>
+      </FadeIn>
     </div>
   );
 }

@@ -1,234 +1,199 @@
-'use client';
-
+import dynamic from 'next/dynamic';
 import { LocaleParams } from '@/types';
-import resumeData from '@/data/resume.json';
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
-import { DownloadButton } from '@/components/resume/download-button';
-import { use } from 'react';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import teamData from '@/data/team.json';
 
-export default function ResumePage({ params }: { params: Promise<LocaleParams> }) {
-  const { lang } = use(params);
+// Dynamic imports for animations
+const FadeIn = dynamic(() => import('@/components/animations/fade-in').then(mod => ({ default: mod.FadeIn })));
+const ScaleIn = dynamic(() => import('@/components/animations/scale-in').then(mod => ({ default: mod.ScaleIn })));
+const StaggerContainer = dynamic(() => import('@/components/animations/stagger-container').then(mod => ({ default: mod.StaggerContainer })));
+const StaggerItem = dynamic(() => import('@/components/animations/stagger-container').then(mod => ({ default: mod.StaggerItem })));
+const HoverCard = dynamic(() => import('@/components/animations/hover-card').then(mod => ({ default: mod.HoverCard })));
 
-  const formatDate = (dateString: string | null, current: boolean) => {
-    if (current) return 'Present';
-    if (!dateString) return '';
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-  };
+// Dynamic imports for icons
+const Users = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Users })));
+const Mail = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Mail })));
+const Linkedin = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Linkedin })));
+const Github = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Github })));
+const Briefcase = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Briefcase })));
+
+export default async function TeamPage({ params }: { params: Promise<LocaleParams> }) {
+  const { lang } = await params;
+  setRequestLocale(lang);
+  const t = await getTranslations('team');
 
   return (
-    <>
-      <style jsx global>{`
-        @media print {
-          body {
-            background: white !important;
-          }
-          header, footer, .no-print {
-            display: none !important;
-          }
-          .resume-container {
-            max-width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            box-shadow: none !important;
-          }
-          .page-break {
-            page-break-before: always;
-          }
-          * {
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-          }
-        }
-      `}</style>
-
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Download Button - Hidden on Print */}
-        <div className="no-print mb-8 flex justify-end">
-          <DownloadButton />
-        </div>
-
-        {/* Resume Container */}
-        <div className="resume-container mx-auto max-w-4xl bg-white shadow-2xl rounded-lg overflow-hidden" style={{ color: '#1a1a1a' }}>
-          {/* Header Section */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-10">
-            <h1 className="text-4xl font-bold mb-2">{resumeData.personal.name}</h1>
-            <p className="text-xl mb-4 opacity-90">{resumeData.personal.title}</p>
-
-            <div className="flex flex-wrap gap-4 text-sm">
-              <a href={`mailto:${resumeData.personal.email}`} className="flex items-center gap-2 hover:underline">
-                <Mail className="w-4 h-4" />
-                {resumeData.personal.email}
-              </a>
-              <a href={`tel:${resumeData.personal.phone.replace(/\s+/g, '')}`} className="flex items-center gap-2 hover:underline">
-                <Phone className="w-4 h-4" />
-                {resumeData.personal.phone}
-              </a>
-              <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                {resumeData.personal.location}
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="text-center mb-16">
+        <FadeIn delay={0.2}>
+          <div className="mb-8">
+            <ScaleIn delay={0.4}>
+              <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold shadow-soft" style={{ background: 'var(--gradient-secondary)', color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>
+                <Users className="w-4 h-4" />
+                {t('badge')}
               </span>
-            </div>
-
-            <div className="flex gap-4 mt-4">
-              <a href={resumeData.personal.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm hover:underline">
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
-              </a>
-              <a href={resumeData.personal.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm hover:underline">
-                <Github className="w-4 h-4" />
-                GitHub
-              </a>
-            </div>
+            </ScaleIn>
           </div>
+        </FadeIn>
 
-          {/* Main Content */}
-          <div className="px-8 py-8">
-            {/* Summary */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-purple-600">Professional Summary</h2>
-              <p className="text-gray-700 leading-relaxed">{resumeData.summary}</p>
-            </section>
+        <FadeIn delay={0.6} direction="up">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl" style={{ color: 'var(--color-text)' }}>
+            {t('title')}{' '}
+            <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
+              {t('titleHighlight')}
+            </span>
+          </h1>
+        </FadeIn>
 
-            {/* Experience */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-purple-600">Professional Experience</h2>
-              <div className="space-y-6">
-                {resumeData.experience.map((exp) => (
-                  <div key={exp.id}>
-                    <div className="flex justify-between items-start mb-2">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{exp.position}</h3>
-                        <p className="text-lg text-purple-600 font-semibold">{exp.company}</p>
-                      </div>
-                      <div className="text-right text-sm text-gray-600">
-                        <p className="font-semibold">{formatDate(exp.startDate, false)} - {formatDate(exp.endDate, exp.current)}</p>
-                        <p>{exp.location} • {exp.workMode}</p>
-                      </div>
+        <FadeIn delay={0.8} direction="up">
+          <p className="mt-6 text-lg leading-8 max-w-3xl mx-auto font-medium" style={{ color: 'var(--color-muted)' }}>
+            {t('description')}
+          </p>
+        </FadeIn>
+      </div>
+
+      {/* Leadership Section */}
+      <FadeIn delay={1.0}>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: 'var(--color-text)' }}>
+            {t('leadership')}
+          </h2>
+          <StaggerContainer className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.15}>
+            {teamData.leadership.map((member, index) => (
+              <StaggerItem key={member.id} index={index}>
+                <HoverCard scaleOnHover={1.03}>
+                  <div className="p-8 rounded-2xl text-center h-full" style={{ background: 'var(--gradient-card)' }}>
+                    {/* Avatar placeholder */}
+                    <div className="mx-auto w-24 h-24 rounded-full mb-4 flex items-center justify-center" style={{ background: 'var(--gradient-primary)' }}>
+                      <span className="text-white font-bold text-3xl">{member.name.charAt(0)}</span>
                     </div>
 
-                    <ul className="list-disc list-outside ml-5 space-y-1 text-gray-700">
-                      {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="leading-relaxed">{resp}</li>
-                      ))}
-                    </ul>
+                    <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--color-text)' }}>
+                      {member.name}
+                    </h3>
 
-                    <div className="mt-3">
-                      <p className="text-sm font-semibold text-gray-600">Technologies:</p>
-                      <div className="flex flex-wrap gap-2 mt-1">
-                        {exp.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                    <p className="text-sm font-semibold mb-4" style={{ color: 'var(--color-primary)' }}>
+                      {member.role}
+                    </p>
+
+                    <p className="text-sm mb-4" style={{ color: 'var(--color-muted)' }}>
+                      {member.bio}
+                    </p>
+
+                    {/* Skills */}
+                    <div className="flex flex-wrap gap-2 justify-center mb-4">
+                      {member.skills.slice(0, 4).map((skill, skillIndex) => (
+                        <span key={skillIndex} className="px-2 py-1 rounded text-xs font-medium" style={{ background: 'var(--gradient-secondary)', color: 'var(--color-text)' }}>
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="flex gap-3 justify-center">
+                      <a href={`mailto:${member.email}`} className="p-2 rounded-lg transition-all duration-300 hover:scale-110" style={{ background: 'var(--gradient-secondary)' }} aria-label="Email">
+                        <Mail className="w-4 h-4" style={{ color: 'var(--color-text)' }} />
+                      </a>
+                      {member.linkedin && (
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg transition-all duration-300 hover:scale-110" style={{ background: 'var(--gradient-secondary)' }} aria-label="LinkedIn">
+                          <Linkedin className="w-4 h-4" style={{ color: 'var(--color-text)' }} />
+                        </a>
+                      )}
+                      {member.github && (
+                        <a href={member.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg transition-all duration-300 hover:scale-110" style={{ background: 'var(--gradient-secondary)' }} aria-label="GitHub">
+                          <Github className="w-4 h-4" style={{ color: 'var(--color-text)' }} />
+                        </a>
+                      )}
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
+                </HoverCard>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </FadeIn>
 
-            {/* Projects */}
-            <section className="mb-8 page-break">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-purple-600">Key Projects</h2>
-              <div className="space-y-6">
-                {resumeData.projects.map((project) => (
-                  <div key={project.id}>
-                    <div className="flex justify-between items-start mb-2">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{project.name}</h3>
-                        <p className="text-md text-purple-600 font-semibold">{project.company}</p>
-                      </div>
-                      <p className="text-sm text-gray-600 font-semibold">
-                        {formatDate(project.startDate, false)} - {formatDate(project.endDate, project.current)}
-                      </p>
+      {/* Team Members Section */}
+      <FadeIn delay={1.2}>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: 'var(--color-text)' }}>
+            {t('members')}
+          </h2>
+          <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.1}>
+            {teamData.team.map((member, index) => (
+              <StaggerItem key={member.id} index={index}>
+                <HoverCard scaleOnHover={1.05}>
+                  <div className="p-6 rounded-2xl text-center h-full" style={{ background: 'var(--gradient-card)' }}>
+                    {/* Avatar placeholder */}
+                    <div className="mx-auto w-20 h-20 rounded-full mb-3 flex items-center justify-center" style={{ background: 'var(--gradient-primary)' }}>
+                      <span className="text-white font-bold text-2xl">{member.name.charAt(0)}</span>
                     </div>
 
-                    <p className="text-gray-700 mb-2">{project.description}</p>
+                    <h3 className="text-lg font-bold mb-1" style={{ color: 'var(--color-text)' }}>
+                      {member.name}
+                    </h3>
 
-                    {project.highlights && project.highlights.length > 0 && (
-                      <ul className="list-disc list-outside ml-5 space-y-1 text-gray-700 mb-3">
-                        {project.highlights.map((highlight, idx) => (
-                          <li key={idx} className="leading-relaxed">{highlight}</li>
-                        ))}
-                      </ul>
-                    )}
+                    <p className="text-xs font-semibold mb-3" style={{ color: 'var(--color-primary)' }}>
+                      {member.role}
+                    </p>
 
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
-                          {tech}
+                    <p className="text-xs mb-3" style={{ color: 'var(--color-muted)' }}>
+                      {member.bio}
+                    </p>
+
+                    {/* Skills */}
+                    <div className="flex flex-wrap gap-1 justify-center">
+                      {member.skills.slice(0, 3).map((skill, skillIndex) => (
+                        <span key={skillIndex} className="px-2 py-0.5 rounded text-xs" style={{ background: 'var(--gradient-secondary)', color: 'var(--color-text)' }}>
+                          {skill}
                         </span>
                       ))}
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
+                </HoverCard>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </FadeIn>
 
-            {/* Technical Skills */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-purple-600">Technical Skills</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Frontend Frameworks</h3>
-                  <p className="text-gray-700 text-sm">{resumeData.technicalSkills.frontendFrameworks.join(', ')}</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Languages</h3>
-                  <p className="text-gray-700 text-sm">{resumeData.technicalSkills.languages.join(', ')}</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Styling & UI</h3>
-                  <p className="text-gray-700 text-sm">{resumeData.technicalSkills.styling.join(', ')}</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">State Management</h3>
-                  <p className="text-gray-700 text-sm">{resumeData.technicalSkills.stateManagement.join(', ')}</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Tools & DevOps</h3>
-                  <p className="text-gray-700 text-sm">{resumeData.technicalSkills.tools.join(', ')}</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Methodologies</h3>
-                  <p className="text-gray-700 text-sm">{resumeData.technicalSkills.methodologies.join(', ')}</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Certifications */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-purple-600">Certifications</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {resumeData.certifications.map((cert) => (
-                  <div key={cert.id} className="flex items-start gap-2">
-                    <span className="text-purple-600 mt-1">•</span>
+      {/* Open Positions */}
+      {teamData.openPositions && teamData.openPositions.length > 0 && (
+        <FadeIn delay={1.4}>
+          <div className="text-center p-12 rounded-3xl" style={{ background: 'var(--gradient-hero)' }}>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+              {t('joinTeam')}
+            </h2>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals to join our team
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-8">
+              {teamData.openPositions.map((position, index) => (
+                <div key={index} className="p-6 rounded-xl bg-white/10 backdrop-blur-sm text-left">
+                  <div className="flex items-start gap-3">
+                    <Briefcase className="w-5 h-5 text-white mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-gray-900">{cert.name}</p>
-                      <p className="text-sm text-gray-600">{cert.issuer} • {formatDate(cert.date, false)}</p>
+                      <h3 className="text-lg font-bold text-white mb-1">{position.title}</h3>
+                      <p className="text-sm text-white/80 mb-2">{position.type} • {position.location}</p>
+                      <p className="text-sm text-white/70">{position.description}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Education */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-purple-600">Education</h2>
-              {resumeData.education.map((edu) => (
-                <div key={edu.id}>
-                  <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
-                  <p className="text-lg text-purple-600 font-semibold">{edu.institution}</p>
-                  <p className="text-sm text-gray-600">
-                    {formatDate(edu.startDate, false)} - {formatDate(edu.endDate, false)} • {edu.location}
-                  </p>
                 </div>
               ))}
-            </section>
+            </div>
+            <HoverCard scaleOnHover={1.05}>
+              <a
+                href={`mailto:careers@appzad.com`}
+                className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-bold bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
+                style={{ color: 'var(--color-primary)' }}
+              >
+                Apply Now
+              </a>
+            </HoverCard>
           </div>
-        </div>
-      </div>
-    </>
+        </FadeIn>
+      )}
+    </div>
   );
 }

@@ -1,96 +1,157 @@
 {
   "navigation": {
     "home": "Home",
-    "about": "About",
+    "about": "About Us",
     "services": "Services",
-    "projects": "My Projects",
-    "resume": "Resume",
-    "schedule": "Schedule",
+    "projects": "Case Studies",
+    "resume": "Team",
+    "schedule": "Get a Quote",
     "contact": "Contact",
     "language": "Language"
   },
   "home": {
-    "badge": "Full Stack Developer",
-    "title": "Welcome to My",
-    "titleHighlight": "Portfolio",
-    "subtitle": "Building modern web applications with cutting-edge technologies. Creating beautiful, functional, and scalable solutions that make a difference.",
+    "badge": "Web Development Agency",
+    "title": "Building Digital Experiences",
+    "titleHighlight": "That Drive Results",
+    "subtitle": "AppZad specializes in creating cutting-edge websites and web applications for Travel, Health, and Hotel industries. We transform your vision into powerful digital solutions.",
     "languageLabel": "Language:",
     "cta": {
-      "learnMore": "Learn More About Me",
-      "viewProjects": "View Projects",
-      "downloadResume": "Download Resume"
+      "learnMore": "Learn More About Us",
+      "viewProjects": "View Case Studies",
+      "downloadResume": "Get a Quote"
     },
     "features": {
       "performance": {
-        "title": "Fast Performance",
-        "description": "Optimized applications with lightning-fast load times and smooth interactions."
+        "title": "Industry Expertise",
+        "description": "Deep specialization in Travel, Health, and Hotel sectors with proven track record."
       },
       "responsive": {
-        "title": "Responsive Design",
-        "description": "Beautiful interfaces that work perfectly on all devices and screen sizes."
+        "title": "Modern Technology",
+        "description": "Built with cutting-edge frameworks like React, Next.js, and TypeScript for optimal performance."
       },
       "quality": {
-        "title": "Quality Code",
-        "description": "Clean, maintainable, and well-documented code following best practices."
+        "title": "Client-Centric",
+        "description": "Your success is our success. We deliver solutions that exceed expectations and drive growth."
+      }
+    },
+    "stats": {
+      "projects": "50+",
+      "projectsLabel": "Projects Delivered",
+      "clients": "30+",
+      "clientsLabel": "Happy Clients",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Client Satisfaction",
+      "support": "24/7",
+      "supportLabel": "Support Available"
+    },
+    "industries": {
+      "badge": "Our Specializations",
+      "title": "Industries We",
+      "titleHighlight": "Serve",
+      "travel": {
+        "title": "Travel",
+        "description": "Booking platforms, tour operators, and travel agencies"
+      },
+      "health": {
+        "title": "Health",
+        "description": "Healthcare providers, telemedicine, and wellness platforms"
+      },
+      "hotel": {
+        "title": "Hotel",
+        "description": "Hotels, resorts, and hospitality management systems"
       }
     }
   },
   "about": {
-    "badge": "About Me",
-    "title": "Passionate",
-    "titleHighlight": "Developer",
-    "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating beautiful, functional, and scalable applications that solve real-world problems.",
-    "skills": {
-      "title": "Skills",
-      "description": "Technologies and tools I work with",
-      "levels": {
-        "expert": "expert",
-        "advanced": "advanced",
-        "intermediate": "intermediate"
-      },
-      "categories": {
-        "frontend": "frontend",
-        "backend": "backend",
-        "database": "database"
-      }
+    "badge": "About AppZad",
+    "title": "Your Trusted Partner in",
+    "titleHighlight": "Web Development",
+    "description": "AppZad is a professional web development agency founded in 2023, specializing in creating cutting-edge websites and web applications for the Travel, Health, and Hotel industries. We combine technical excellence with industry expertise to deliver solutions that drive real business results.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses in the Travel, Health, and Hotel sectors with innovative web solutions that enhance customer experiences and drive measurable growth."
     },
-    "experience": {
-      "title": "Experience",
-      "description": "My professional journey",
-      "jobs": {
-        "senior": {
-          "title": "Senior Full Stack Developer",
-          "company": "TechCorp",
-          "period": "2022 - Present",
-          "description": "Leading development of modern web applications using React, Next.js, and Node.js. Mentoring junior developers and implementing best practices."
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the leading digital partner for businesses seeking to excel in the digital landscape through exceptional web development and user-centric design."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "The principles that guide everything we do",
+      "list": {
+        "clientCentric": {
+          "title": "Client-Centric",
+          "description": "We put our clients at the heart of everything we do, ensuring their success is our success."
         },
-        "developer": {
-          "title": "Full Stack Developer",
-          "company": "StartupXYZ",
-          "period": "2020 - 2022",
-          "description": "Built and maintained multiple client projects, implemented CI/CD pipelines, and contributed to the company's core product development."
+        "innovation": {
+          "title": "Innovation",
+          "description": "We stay ahead of the curve by embracing the latest technologies and best practices."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "We deliver pixel-perfect, high-performance solutions that exceed expectations."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "We maintain open communication throughout the entire development process."
         }
       }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose",
+      "titleHighlight": "AppZad",
+      "description": "What sets us apart from other agencies",
+      "reasons": {
+        "expertise": {
+          "title": "Industry Expertise",
+          "description": "Deep understanding of Travel, Health, and Hotel industry requirements and best practices."
+        },
+        "technology": {
+          "title": "Modern Technology Stack",
+          "description": "We use cutting-edge technologies like React, Next.js, and TypeScript for optimal performance."
+        },
+        "responsive": {
+          "title": "Responsive Design",
+          "description": "All our solutions are fully responsive and optimized for mobile, tablet, and desktop."
+        },
+        "seo": {
+          "title": "SEO Optimized",
+          "description": "Built-in SEO best practices to help your website rank higher in search results."
+        },
+        "delivery": {
+          "title": "Fast Delivery",
+          "description": "Agile development process ensures timely delivery without compromising quality."
+        },
+        "support": {
+          "title": "Ongoing Support",
+          "description": "We provide continuous support and maintenance to keep your website running smoothly."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our",
+      "titleHighlight": "Team",
+      "description": "The talented people behind AppZad"
     }
   },
   "services": {
-    "badge": "Services",
-    "title": "What I",
-    "titleHighlight": "Offer",
-    "description": "Comprehensive development services tailored to bring your ideas to life. From concept to deployment, I provide end-to-end solutions for your digital needs.",
+    "badge": "Our Services",
+    "title": "What We",
+    "titleHighlight": "Deliver",
+    "description": "Comprehensive web development services tailored for Travel, Health, and Hotel industries. From concept to deployment, we provide end-to-end solutions that drive results.",
     "cta": {
       "title": "Ready to Start Your Project?",
       "description": "Let's work together to bring your vision to life",
-      "button": "Get In Touch"
+      "button": "Get a Quote"
     },
     "list": {
       "webDevelopment": {
-        "title": "Web Development",
-        "description": "Building modern, responsive websites and web applications using cutting-edge technologies like React, Next.js, and TypeScript.",
+        "title": "Custom Web Development",
+        "description": "Building modern, scalable websites and web applications tailored to your business needs using cutting-edge technologies.",
         "features": {
           "custom": "Custom Web Applications",
           "pwa": "Progressive Web Apps (PWA)",
-          "api": "API Development & Integration",
+          "api": "Third-party API Integration",
           "optimization": "Performance Optimization"
         }
       },
@@ -135,43 +196,73 @@
         }
       },
       "ecommerce": {
-        "title": "E-Commerce Solutions",
-        "description": "Creating powerful e-commerce platforms with secure payment processing and inventory management.",
+        "title": "Booking & Reservation Systems",
+        "description": "Powerful booking platforms for travel, hotels, and healthcare with real-time availability and secure payment processing.",
         "features": {
-          "cart": "Shopping Cart Systems",
+          "cart": "Online Booking Systems",
           "payment": "Payment Gateway Integration",
-          "products": "Product Management",
-          "orders": "Order Processing"
+          "products": "Inventory Management",
+          "orders": "Reservation Processing"
+        }
+      },
+      "travel": {
+        "title": "Travel Solutions",
+        "description": "Specialized platforms for travel agencies, tour operators, and destination management companies.",
+        "features": {
+          "booking": "Travel Booking Systems",
+          "itinerary": "Itinerary Management",
+          "multi": "Multi-currency Support",
+          "integration": "GDS & API Integration"
+        }
+      },
+      "health": {
+        "title": "Healthcare Platforms",
+        "description": "HIPAA-compliant solutions for healthcare providers, telemedicine, and wellness platforms.",
+        "features": {
+          "portal": "Patient Portals",
+          "scheduling": "Appointment Scheduling",
+          "telehealth": "Telemedicine Integration",
+          "ehr": "EHR System Integration"
+        }
+      },
+      "hotel": {
+        "title": "Hotel Management",
+        "description": "Complete hospitality solutions for hotels, resorts, and vacation rentals.",
+        "features": {
+          "pms": "Property Management Systems",
+          "booking": "Direct Booking Engine",
+          "channel": "Channel Manager Integration",
+          "guest": "Guest Experience Platforms"
         }
       }
     }
   },
   "contact": {
-    "badge": "Contact",
-    "title": "Get In",
-    "titleHighlight": "Touch",
-    "description": "Have a project in mind or just want to chat? I'd love to hear from you. Feel free to reach out through any of the channels below.",
+    "badge": "Contact Us",
+    "title": "Let's Build Something",
+    "titleHighlight": "Amazing Together",
+    "description": "Have a project in mind? We'd love to hear from you. Get in touch to discuss how we can help transform your digital presence.",
     "info": {
       "title": "Contact Information",
       "email": {
         "label": "Email",
-        "value": "your.email@example.com"
+        "value": "hello@appzad.com"
       },
       "phone": {
         "label": "Phone",
-        "value": "+1 (555) 123-4567"
+        "value": "+91-8421145620"
       },
       "location": {
         "label": "Location",
-        "value": "San Francisco, CA"
+        "value": "Hyderabad, Telangana, India"
       },
       "social": {
-        "title": "Connect With Me"
+        "title": "Connect With Us"
       }
     },
     "form": {
-      "title": "Send a Message",
-      "description": "Fill out the form below and I'll get back to you as soon as possible.",
+      "title": "Get a Free Quote",
+      "description": "Fill out the form below and we'll get back to you within 24 hours with a detailed proposal.",
       "name": {
         "label": "Name",
         "placeholder": "Your name"
@@ -195,27 +286,46 @@
     }
   },
   "projects": {
-    "title": "My Projects",
-    "subtitle": "A collection of my recent work and personal projects",
-    "view_project": "View Project",
-    "view_code": "View Code",
+    "badge": "Our Work",
+    "title": "Success",
+    "titleHighlight": "Stories",
+    "subtitle": "Explore how we've helped businesses in Travel, Health, and Hotel industries achieve their digital goals",
+    "view_project": "View Case Study",
+    "view_code": "View Details",
     "technologies_used": "Technologies Used",
-    "no_projects": "No projects found"
+    "no_projects": "No case studies found",
+    "client": "Client",
+    "industry": "Industry",
+    "duration": "Project Duration",
+    "challenge": "The Challenge",
+    "solution": "Our Solution",
+    "results": "Results & Impact",
+    "testimonial": "Client Testimonial",
+    "allCaseStudies": "View All Case Studies"
   },
   "footer": {
-    "copyright": "© 2024 Portfolio. Made with",
-    "tagline": "Building modern web applications with passion and cutting-edge technology.",
+    "copyright": "© 2024 AppZad. All rights reserved.",
+    "tagline": "Professional web development agency specializing in Travel, Health, and Hotel industries.",
     "quickLinks": "Quick Links",
     "services": "Services",
+    "industries": "Industries",
+    "caseStudies": "Case Studies",
+    "team": "Our Team",
     "contact": "Contact",
+    "getQuote": "Get a Quote",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },
   "schedule": {
-    "badge": "Schedule Meeting",
-    "title": "Book a",
-    "titleHighlight": "Meeting",
-    "description": "Schedule a time to discuss your project, collaboration opportunities, or just have a chat about technology.",
+    "badge": "Get a Quote",
+    "title": "Request a Free",
+    "titleHighlight": "Consultation",
+    "description": "Schedule a consultation to discuss your project requirements, timeline, and budget. We'll provide a detailed proposal tailored to your needs.",
     "legend": {
       "available": "Available",
       "selected": "Selected",
@@ -242,24 +352,67 @@
       "cancel": "Cancel"
     },
     "instructions": {
-      "title": "How to Schedule:",
+      "title": "How it Works:",
       "step1": "1. Select your preferred date and time from the calendar above",
-      "step2": "2. Choose an available time slot (shown in green)",
-      "step3": "3. Fill in your details and any specific topics you'd like to discuss",
-      "step4": "4. You'll receive a calendar invitation with meeting details"
+      "step2": "2. Choose an available consultation slot (shown in green)",
+      "step3": "3. Provide your project details and requirements",
+      "step4": "4. Receive a detailed proposal within 24-48 hours"
     },
     "contact": {
       "title": "Or reach out directly:",
       "email": "Email:",
+      "phone": "Phone:",
       "linkedin": "LinkedIn:",
       "linkedinText": "Connect on LinkedIn"
+    },
+    "projectDetails": {
+      "title": "Project Details",
+      "industry": {
+        "label": "Industry",
+        "placeholder": "Select your industry",
+        "travel": "Travel",
+        "health": "Health",
+        "hotel": "Hotel",
+        "other": "Other"
+      },
+      "budget": {
+        "label": "Estimated Budget (USD)",
+        "placeholder": "Select your budget range",
+        "small": "$5,000 - $10,000",
+        "medium": "$10,000 - $25,000",
+        "large": "$25,000 - $50,000",
+        "enterprise": "$50,000+"
+      },
+      "timeline": {
+        "label": "Timeline",
+        "placeholder": "When do you need this completed?",
+        "urgent": "Within 1 month",
+        "normal": "1-3 months",
+        "flexible": "3-6 months",
+        "planning": "Just exploring options"
+      }
     }
+  },
+  "team": {
+    "badge": "Our Team",
+    "title": "Meet the",
+    "titleHighlight": "Team",
+    "description": "The talented professionals behind AppZad's success",
+    "leadership": "Leadership",
+    "members": "Team Members",
+    "openPositions": "Open Positions",
+    "joinTeam": "Join Our Team",
+    "viewProfile": "View Profile",
+    "contactMember": "Contact"
   },
   "common": {
     "loading": "Loading...",
     "error": "Something went wrong",
     "back": "Back",
     "next": "Next",
-    "previous": "Previous"
+    "previous": "Previous",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All"
   }
 }

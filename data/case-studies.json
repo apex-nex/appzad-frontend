@@ -1,0 +1,198 @@
+{
+  "caseStudies": [
+    {
+      "id": "1",
+      "slug": "curacao-travel-platform",
+      "title": "Curacao Travel Edge",
+      "client": "Curacao Tourism Board",
+      "industry": "Travel",
+      "tagline": "Comprehensive travel booking platform for Caribbean destinations",
+      "description": "A full-featured travel booking platform that enables tourists to discover and book experiences in Curacao, featuring real-time availability, multi-currency support, and seamless payment processing.",
+      "challenge": "The Curacao Tourism Board needed a modern, user-friendly platform to showcase the island's attractions and streamline the booking process for international travelers.",
+      "solution": "We developed a responsive web application with integrated booking system, dynamic content management, and multi-language support to cater to diverse international audiences.",
+      "results": [
+        "45% increase in online bookings",
+        "3x faster booking process",
+        "92% user satisfaction rating",
+        "Reduced support tickets by 60%"
+      ],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Stripe",
+        "REST API"
+      ],
+      "image": "/projects/curacao.jpg",
+      "images": [
+        "/projects/curacao-1.jpg",
+        "/projects/curacao-2.jpg",
+        "/projects/curacao-3.jpg"
+      ],
+      "link": "https://curacao-travel.example.com",
+      "featured": true,
+      "testimonial": {
+        "quote": "AppZad transformed our online presence and made booking experiences seamless for our visitors.",
+        "author": "Jane Doe",
+        "position": "Director of Tourism"
+      },
+      "duration": "3 months",
+      "year": "2024"
+    },
+    {
+      "id": "2",
+      "slug": "axis-bank-travel-edge",
+      "title": "Axis Bank Travel Edge",
+      "client": "Axis Bank",
+      "industry": "Travel",
+      "tagline": "Premium travel experience booking platform for bank customers",
+      "description": "An exclusive travel booking platform for Axis Bank premium cardholders, offering curated travel experiences, special deals, and seamless reward point redemption.",
+      "challenge": "Axis Bank wanted to provide added value to premium customers through an integrated travel platform with reward points integration.",
+      "solution": "Built a secure, feature-rich platform with bank API integration for authentication, reward points tracking, and exclusive partner deals.",
+      "results": [
+        "100,000+ active users in 6 months",
+        "₹50M in bookings processed",
+        "40% increase in card usage",
+        "98% uptime maintained"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Payment Gateway",
+        "Bank API Integration"
+      ],
+      "image": "/projects/axis-bank.jpg",
+      "images": [
+        "/projects/axis-1.jpg",
+        "/projects/axis-2.jpg"
+      ],
+      "link": null,
+      "featured": true,
+      "testimonial": {
+        "quote": "The platform exceeded our expectations in both functionality and user experience.",
+        "author": "Amit Sharma",
+        "position": "Product Head, Travel"
+      },
+      "duration": "4 months",
+      "year": "2024"
+    },
+    {
+      "id": "3",
+      "slug": "indigo-hotel-booking",
+      "title": "Indigo Hotel Booking Platform",
+      "client": "Indigo Hotels",
+      "industry": "Hotel",
+      "tagline": "Modern hotel booking system with real-time inventory management",
+      "description": "A comprehensive hotel booking platform featuring real-time room availability, dynamic pricing, guest management, and integrated payment processing.",
+      "challenge": "Indigo Hotels needed to modernize their booking system to compete in the digital marketplace and provide better guest experiences.",
+      "solution": "Developed a scalable booking engine with channel manager integration, revenue optimization tools, and a mobile-first design approach.",
+      "results": [
+        "55% increase in direct bookings",
+        "Reduced OTA dependency by 30%",
+        "Average booking time cut to 2 minutes",
+        "Mobile bookings increased by 70%"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Redis",
+        "AWS",
+        "Channel Manager API"
+      ],
+      "image": "/projects/indigo.jpg",
+      "images": [
+        "/projects/indigo-1.jpg",
+        "/projects/indigo-2.jpg",
+        "/projects/indigo-3.jpg"
+      ],
+      "link": "https://indigo-hotels.example.com",
+      "featured": true,
+      "testimonial": {
+        "quote": "Our direct booking revenue has skyrocketed since implementing this platform.",
+        "author": "Priya Patel",
+        "position": "General Manager"
+      },
+      "duration": "5 months",
+      "year": "2023"
+    },
+    {
+      "id": "4",
+      "slug": "sbi-cards-travel",
+      "title": "SBI Cards Travel Management",
+      "client": "SBI Cards",
+      "industry": "Travel",
+      "tagline": "Integrated travel management app for credit card customers",
+      "description": "A mobile-optimized travel booking and management platform for SBI Card users, featuring exclusive deals, reward redemption, and trip planning tools.",
+      "challenge": "SBI Cards wanted to add value to their product portfolio by offering integrated travel services to cardholders.",
+      "solution": "Created a progressive web app with card benefit integration, personalized recommendations, and secure payment processing.",
+      "results": [
+        "200,000+ downloads",
+        "₹100M+ in transaction value",
+        "4.5/5 app store rating",
+        "85% customer retention rate"
+      ],
+      "technologies": [
+        "React",
+        "PWA",
+        "Firebase",
+        "Payment Gateway",
+        "Push Notifications"
+      ],
+      "image": "/projects/sbi.jpg",
+      "images": [
+        "/projects/sbi-1.jpg",
+        "/projects/sbi-2.jpg"
+      ],
+      "link": null,
+      "featured": false,
+      "testimonial": {
+        "quote": "AppZad delivered a robust solution that our customers love to use.",
+        "author": "Ramesh Kumar",
+        "position": "VP, Digital Products"
+      },
+      "duration": "3 months",
+      "year": "2023"
+    },
+    {
+      "id": "5",
+      "slug": "healthplus-patient-portal",
+      "title": "HealthPlus Patient Portal",
+      "client": "HealthPlus Clinic",
+      "industry": "Health",
+      "tagline": "HIPAA-compliant patient portal for modern healthcare",
+      "description": "A secure patient portal enabling appointment scheduling, medical records access, telemedicine consultations, and prescription management.",
+      "challenge": "HealthPlus needed a HIPAA-compliant digital solution to improve patient engagement and streamline administrative workflows.",
+      "solution": "Built a secure, user-friendly portal with end-to-end encryption, video consultation capabilities, and EHR integration.",
+      "results": [
+        "70% reduction in phone appointments",
+        "5,000+ active patients",
+        "90% patient satisfaction score",
+        "50% faster check-in process"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "HIPAA-compliant hosting",
+        "Video SDK",
+        "EHR API"
+      ],
+      "image": "/projects/healthplus.jpg",
+      "images": [
+        "/projects/healthplus-1.jpg",
+        "/projects/healthplus-2.jpg"
+      ],
+      "link": null,
+      "featured": false,
+      "testimonial": {
+        "quote": "This portal has revolutionized how we interact with our patients.",
+        "author": "Dr. Anita Desai",
+        "position": "Medical Director"
+      },
+      "duration": "6 months",
+      "year": "2024"
+    }
+  ]
+}

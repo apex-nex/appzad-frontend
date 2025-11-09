@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { LocaleParams } from '@/types';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Dynamic imports for animations
 const FadeIn = dynamic(() => import('@/components/animations/fade-in').then(mod => ({ default: mod.FadeIn })));
@@ -16,91 +18,71 @@ const Smartphone = dynamic(() => import('lucide-react').then(mod => ({ default: 
 const Database = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Database })));
 const Cloud = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Cloud })));
 const Zap = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Zap })));
-const Globe = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Globe })));
 const ShoppingCart = dynamic(() => import('lucide-react').then(mod => ({ default: mod.ShoppingCart })));
 const CheckCircle = dynamic(() => import('lucide-react').then(mod => ({ default: mod.CheckCircle })));
+const Plane = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Plane })));
+const Heart = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Heart })));
+const Hotel = dynamic(() => import('lucide-react').then(mod => ({ default: mod.Hotel })));
 
 export default async function ServicesPage({ params }: { params: Promise<LocaleParams> }) {
   const { lang } = await params;
+  setRequestLocale(lang);
+  const t = await getTranslations('services');
 
   const services = [
     {
       icon: Code,
-      title: 'Web Development',
-      description: 'Building modern, responsive websites and web applications using cutting-edge technologies like React, Next.js, and TypeScript.',
-      features: [
-        'Custom Web Applications',
-        'Progressive Web Apps (PWA)',
-        'API Development & Integration',
-        'Performance Optimization',
-      ],
+      key: 'webDevelopment',
       color: 'var(--color-primary)',
       gradient: 'var(--gradient-primary)',
     },
     {
       icon: Palette,
-      title: 'UI/UX Design',
-      description: 'Creating beautiful, intuitive interfaces that provide exceptional user experiences and drive engagement.',
-      features: [
-        'User Interface Design',
-        'User Experience Research',
-        'Prototyping & Wireframing',
-        'Design Systems',
-      ],
+      key: 'uiux',
       color: 'var(--color-accent)',
       gradient: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%)',
     },
     {
       icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Developing cross-platform mobile applications that work seamlessly on iOS and Android devices.',
-      features: [
-        'React Native Development',
-        'Responsive Mobile Design',
-        'Native Performance',
-        'App Store Deployment',
-      ],
+      key: 'mobile',
       color: 'var(--color-secondary)',
       gradient: 'linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%)',
     },
     {
       icon: Database,
-      title: 'Backend Development',
-      description: 'Building robust, scalable backend systems with secure APIs and efficient database management.',
-      features: [
-        'RESTful API Design',
-        'Database Architecture',
-        'Authentication & Security',
-        'Server-side Logic',
-      ],
+      key: 'backend',
       color: 'var(--color-primary)',
       gradient: 'var(--gradient-primary)',
     },
     {
       icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Deploying and managing applications on cloud platforms with automated CI/CD pipelines.',
-      features: [
-        'AWS / Azure / GCP',
-        'Docker & Kubernetes',
-        'CI/CD Pipelines',
-        'Infrastructure as Code',
-      ],
+      key: 'cloud',
       color: 'var(--color-accent)',
       gradient: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%)',
     },
     {
       icon: ShoppingCart,
-      title: 'E-Commerce Solutions',
-      description: 'Creating powerful e-commerce platforms with secure payment processing and inventory management.',
-      features: [
-        'Shopping Cart Systems',
-        'Payment Gateway Integration',
-        'Product Management',
-        'Order Processing',
-      ],
+      key: 'ecommerce',
       color: 'var(--color-secondary)',
       gradient: 'linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%)',
+    },
+    {
+      icon: Plane,
+      key: 'travel',
+      color: 'var(--color-primary)',
+      gradient: 'var(--gradient-primary)',
+    },
+    {
+      icon: Heart,
+      key: 'health',
+      color: 'var(--color-accent)',
+      gradient: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%)',
+    },
+    {
+      icon: Hotel,
+      key: 'hotel',
+      color: 'var(--color-secondary)',
+      gradient: 'linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%)',
     },
   ];
 
@@ -112,7 +94,7 @@ export default async function ServicesPage({ params }: { params: Promise<LocaleP
             <ScaleIn delay={0.4}>
               <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold shadow-soft" style={{ background: 'var(--gradient-secondary)', color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>
                 <Zap className="w-4 h-4" />
-                Services
+                {t('badge')}
               </span>
             </ScaleIn>
           </div>
@@ -120,17 +102,16 @@ export default async function ServicesPage({ params }: { params: Promise<LocaleP
 
         <FadeIn delay={0.6} direction="up">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl" style={{ color: 'var(--color-text)' }}>
-            What I{' '}
+            {t('title')}{' '}
             <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-              Offer
+              {t('titleHighlight')}
             </span>
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.8} direction="up">
           <p className="mt-6 text-lg leading-8 max-w-3xl mx-auto font-medium" style={{ color: 'var(--color-muted)' }}>
-            Comprehensive development services tailored to bring your ideas to life.
-            From concept to deployment, I provide end-to-end solutions for your digital needs.
+            {t('description')}
           </p>
         </FadeIn>
       </div>
@@ -138,8 +119,15 @@ export default async function ServicesPage({ params }: { params: Promise<LocaleP
       <StaggerContainer className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.15}>
         {services.map((service, index) => {
           const Icon = service.icon;
+          const features = [
+            t(`list.${service.key}.features.custom` as any),
+            t(`list.${service.key}.features.pwa` as any),
+            t(`list.${service.key}.features.api` as any),
+            t(`list.${service.key}.features.optimization` as any),
+          ].filter(Boolean);
+
           return (
-            <StaggerItem key={service.title} index={index}>
+            <StaggerItem key={service.key} index={index}>
               <HoverCard scaleOnHover={1.05} rotateOnHover={1}>
                 <Card className="h-full hover:shadow-strong transition-all duration-300" style={{ background: 'var(--gradient-card)' }}>
                   <CardHeader>
@@ -151,15 +139,15 @@ export default async function ServicesPage({ params }: { params: Promise<LocaleP
                       </ScaleIn>
                     </div>
                     <CardTitle className="text-xl font-bold" style={{ color: 'var(--color-text)' }}>
-                      {service.title}
+                      {t(`list.${service.key}.title` as any)}
                     </CardTitle>
                     <CardDescription className="font-medium" style={{ color: 'var(--color-muted)' }}>
-                      {service.description}
+                      {t(`list.${service.key}.description` as any)}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => (
+                      {features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: service.color }} />
                           <span className="text-sm font-medium" style={{ color: 'var(--color-text)' }}>{feature}</span>
@@ -176,22 +164,24 @@ export default async function ServicesPage({ params }: { params: Promise<LocaleP
 
       {/* Call to Action */}
       <FadeIn delay={1.2}>
-        <div className="mt-20 text-center p-12 rounded-3xl shadow-strong" style={{ background: 'var(--gradient-card)', border: '2px solid var(--color-primary)' }}>
-          <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-text)' }}>
-            Ready to Start Your Project?
+        <div className="mt-20 text-center p-12 rounded-3xl" style={{ background: 'var(--gradient-hero)' }}>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            {t('cta.title')}
           </h2>
-          <p className="text-lg mb-8 font-medium" style={{ color: 'var(--color-muted)' }}>
-            Let&apos;s work together to bring your vision to life
+          <p className="text-lg text-white/90 mb-8 font-medium">
+            {t('cta.description')}
           </p>
           <HoverCard scaleOnHover={1.08}>
-            <a
-              href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-medium hover:shadow-strong transition-all duration-300"
-              style={{ background: 'var(--gradient-primary)' }}
+            <Link
+              href={`/${lang}/schedule`}
+              className="inline-flex items-center gap-2 rounded-full px-10 py-4 text-lg font-bold bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
+              style={{ color: 'var(--color-primary)' }}
             >
-              <Globe className="w-5 h-5" />
-              Get In Touch
-            </a>
+              {t('cta.button')}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </HoverCard>
         </div>
       </FadeIn>

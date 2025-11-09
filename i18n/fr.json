@@ -1,96 +1,157 @@
 {
   "navigation": {
     "home": "Accueil",
-    "about": "À propos",
+    "about": "À Propos de Nous",
     "services": "Services",
-    "projects": "Mes Projets",
-    "resume": "CV",
-    "schedule": "Planifier",
+    "projects": "Études de Cas",
+    "resume": "Équipe",
+    "schedule": "Obtenir un Devis",
     "contact": "Contact",
     "language": "Langue"
   },
   "home": {
-    "badge": "Développeur Full Stack",
-    "title": "Bienvenue sur Mon",
-    "titleHighlight": "Portfolio",
-    "subtitle": "Création d'applications web modernes avec des technologies de pointe. Création de solutions belles, fonctionnelles et évolutives qui font la différence.",
+    "badge": "Agence de Développement Web",
+    "title": "Créer des Expériences Numériques",
+    "titleHighlight": "Qui Génèrent des Résultats",
+    "subtitle": "AppZad se spécialise dans la création de sites web et d'applications web de pointe pour les industries du voyage, de la santé et de l'hôtellerie. Nous transformons votre vision en solutions numériques puissantes.",
     "languageLabel": "Langue:",
     "cta": {
-      "learnMore": "En Savoir Plus Sur Moi",
-      "viewProjects": "Voir les Projets",
-      "downloadResume": "Télécharger le CV"
+      "learnMore": "En Savoir Plus Sur Nous",
+      "viewProjects": "Voir les Études de Cas",
+      "downloadResume": "Obtenir un Devis"
     },
     "features": {
       "performance": {
-        "title": "Performance Rapide",
-        "description": "Applications optimisées avec des temps de chargement ultra-rapides et des interactions fluides."
+        "title": "Expertise Sectorielle",
+        "description": "Spécialisation approfondie dans les secteurs du voyage, de la santé et de l'hôtellerie avec un historique éprouvé."
       },
       "responsive": {
-        "title": "Design Réactif",
-        "description": "De belles interfaces qui fonctionnent parfaitement sur tous les appareils et tailles d'écran."
+        "title": "Technologie Moderne",
+        "description": "Construit avec des frameworks de pointe comme React, Next.js et TypeScript pour des performances optimales."
       },
       "quality": {
-        "title": "Code de Qualité",
-        "description": "Code propre, maintenable et bien documenté suivant les meilleures pratiques."
+        "title": "Centré sur le Client",
+        "description": "Votre succès est notre succès. Nous livrons des solutions qui dépassent les attentes et stimulent la croissance."
+      }
+    },
+    "stats": {
+      "projects": "50+",
+      "projectsLabel": "Projets Livrés",
+      "clients": "30+",
+      "clientsLabel": "Clients Satisfaits",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Satisfaction Client",
+      "support": "24/7",
+      "supportLabel": "Support Disponible"
+    },
+    "industries": {
+      "badge": "Nos Spécialisations",
+      "title": "Industries Que Nous",
+      "titleHighlight": "Servons",
+      "travel": {
+        "title": "Voyage",
+        "description": "Plateformes de réservation, tour-opérateurs et agences de voyage"
+      },
+      "health": {
+        "title": "Santé",
+        "description": "Prestataires de soins de santé, télémédecine et plateformes de bien-être"
+      },
+      "hotel": {
+        "title": "Hôtel",
+        "description": "Hôtels, stations balnéaires et systèmes de gestion hôtelière"
       }
     }
   },
   "about": {
-    "badge": "À Propos de Moi",
-    "title": "Développeur",
-    "titleHighlight": "Passionné",
-    "description": "Je suis un développeur full-stack passionné avec une expertise en technologies web modernes. J'aime créer des applications belles, fonctionnelles et évolutives qui résolvent des problèmes réels.",
-    "skills": {
-      "title": "Compétences",
-      "description": "Technologies et outils avec lesquels je travaille",
-      "levels": {
-        "expert": "expert",
-        "advanced": "avancé",
-        "intermediate": "intermédiaire"
-      },
-      "categories": {
-        "frontend": "frontend",
-        "backend": "backend",
-        "database": "base de données"
-      }
+    "badge": "À Propos d'AppZad",
+    "title": "Votre Partenaire de Confiance en",
+    "titleHighlight": "Développement Web",
+    "description": "AppZad est une agence professionnelle de développement web fondée en 2023, spécialisée dans la création de sites web et d'applications web de pointe pour les industries du voyage, de la santé et de l'hôtellerie. Nous combinons l'excellence technique avec l'expertise du secteur pour fournir des solutions qui génèrent de vrais résultats commerciaux.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Autonomiser les entreprises des secteurs du voyage, de la santé et de l'hôtellerie avec des solutions web innovantes qui améliorent les expériences client et stimulent une croissance mesurable."
     },
-    "experience": {
-      "title": "Expérience",
-      "description": "Mon parcours professionnel",
-      "jobs": {
-        "senior": {
-          "title": "Développeur Full Stack Senior",
-          "company": "TechCorp",
-          "period": "2022 - Présent",
-          "description": "Direction du développement d'applications web modernes utilisant React, Next.js et Node.js. Mentorat des développeurs juniors et mise en œuvre des meilleures pratiques."
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Devenir le partenaire numérique leader pour les entreprises cherchant à exceller dans le paysage numérique grâce à un développement web exceptionnel et une conception centrée sur l'utilisateur."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "description": "Les principes qui guident tout ce que nous faisons",
+      "list": {
+        "clientCentric": {
+          "title": "Centré sur le Client",
+          "description": "Nous plaçons nos clients au cœur de tout ce que nous faisons, en veillant à ce que leur succès soit notre succès."
         },
-        "developer": {
-          "title": "Développeur Full Stack",
-          "company": "StartupXYZ",
-          "period": "2020 - 2022",
-          "description": "Création et maintenance de plusieurs projets clients, mise en place de pipelines CI/CD et contribution au développement du produit principal de l'entreprise."
+        "innovation": {
+          "title": "Innovation",
+          "description": "Nous gardons une longueur d'avance en adoptant les dernières technologies et les meilleures pratiques."
+        },
+        "quality": {
+          "title": "Qualité",
+          "description": "Nous livrons des solutions parfaites au pixel près et hautement performantes qui dépassent les attentes."
+        },
+        "transparency": {
+          "title": "Transparence",
+          "description": "Nous maintenons une communication ouverte tout au long du processus de développement."
         }
       }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi Choisir",
+      "titleHighlight": "AppZad",
+      "description": "Ce qui nous distingue des autres agences",
+      "reasons": {
+        "expertise": {
+          "title": "Expertise Sectorielle",
+          "description": "Compréhension approfondie des exigences et des meilleures pratiques des industries du voyage, de la santé et de l'hôtellerie."
+        },
+        "technology": {
+          "title": "Stack Technologique Moderne",
+          "description": "Nous utilisons des technologies de pointe comme React, Next.js et TypeScript pour des performances optimales."
+        },
+        "responsive": {
+          "title": "Design Réactif",
+          "description": "Toutes nos solutions sont entièrement réactives et optimisées pour mobile, tablette et ordinateur de bureau."
+        },
+        "seo": {
+          "title": "Optimisé pour le SEO",
+          "description": "Meilleures pratiques SEO intégrées pour aider votre site web à mieux se classer dans les résultats de recherche."
+        },
+        "delivery": {
+          "title": "Livraison Rapide",
+          "description": "Le processus de développement agile garantit une livraison dans les délais sans compromettre la qualité."
+        },
+        "support": {
+          "title": "Support Continu",
+          "description": "Nous fournissons un support et une maintenance continus pour que votre site web fonctionne sans problème."
+        }
+      }
+    },
+    "team": {
+      "title": "Rencontrez Notre",
+      "titleHighlight": "Équipe",
+      "description": "Les professionnels talentueux derrière AppZad"
     }
   },
   "services": {
-    "badge": "Services",
-    "title": "Ce Que Je",
-    "titleHighlight": "Propose",
-    "description": "Services de développement complets adaptés pour donner vie à vos idées. Du concept au déploiement, je fournis des solutions de bout en bout pour vos besoins numériques.",
+    "badge": "Nos Services",
+    "title": "Ce Que Nous",
+    "titleHighlight": "Livrons",
+    "description": "Services de développement web complets adaptés aux industries du voyage, de la santé et de l'hôtellerie. Du concept au déploiement, nous fournissons des solutions de bout en bout qui génèrent des résultats.",
     "cta": {
       "title": "Prêt à Démarrer Votre Projet?",
       "description": "Travaillons ensemble pour donner vie à votre vision",
-      "button": "Contactez-Moi"
+      "button": "Obtenir un Devis"
     },
     "list": {
       "webDevelopment": {
-        "title": "Développement Web",
-        "description": "Création de sites web et d'applications web modernes et réactifs utilisant des technologies de pointe comme React, Next.js et TypeScript.",
+        "title": "Développement Web Personnalisé",
+        "description": "Création de sites web et d'applications web modernes et évolutifs adaptés aux besoins de votre entreprise avec des technologies de pointe.",
         "features": {
           "custom": "Applications Web Personnalisées",
           "pwa": "Applications Web Progressives (PWA)",
-          "api": "Développement et Intégration d'API",
+          "api": "Intégration d'API Tierces",
           "optimization": "Optimisation des Performances"
         }
       },
@@ -135,43 +196,73 @@
         }
       },
       "ecommerce": {
-        "title": "Solutions E-Commerce",
-        "description": "Création de plateformes e-commerce puissantes avec traitement sécurisé des paiements et gestion des stocks.",
+        "title": "Systèmes de Réservation",
+        "description": "Plateformes de réservation puissantes pour le voyage, les hôtels et les soins de santé avec disponibilité en temps réel et traitement sécurisé des paiements.",
         "features": {
-          "cart": "Systèmes de Panier d'Achat",
+          "cart": "Systèmes de Réservation en Ligne",
           "payment": "Intégration de Passerelle de Paiement",
-          "products": "Gestion des Produits",
-          "orders": "Traitement des Commandes"
+          "products": "Gestion des Stocks",
+          "orders": "Traitement des Réservations"
+        }
+      },
+      "travel": {
+        "title": "Solutions Voyage",
+        "description": "Plateformes spécialisées pour les agences de voyage, les tour-opérateurs et les sociétés de gestion de destinations.",
+        "features": {
+          "booking": "Systèmes de Réservation de Voyage",
+          "itinerary": "Gestion d'Itinéraire",
+          "multi": "Support Multi-devises",
+          "integration": "Intégration GDS et API"
+        }
+      },
+      "health": {
+        "title": "Plateformes de Santé",
+        "description": "Solutions conformes HIPAA pour les prestataires de soins de santé, la télémédecine et les plateformes de bien-être.",
+        "features": {
+          "portal": "Portails Patients",
+          "scheduling": "Planification de Rendez-vous",
+          "telehealth": "Intégration de Télémédecine",
+          "ehr": "Intégration de Système EHR"
+        }
+      },
+      "hotel": {
+        "title": "Gestion Hôtelière",
+        "description": "Solutions d'hospitalité complètes pour les hôtels, les stations balnéaires et les locations de vacances.",
+        "features": {
+          "pms": "Systèmes de Gestion Immobilière",
+          "booking": "Moteur de Réservation Direct",
+          "channel": "Intégration de Gestionnaire de Canaux",
+          "guest": "Plateformes d'Expérience Client"
         }
       }
     }
   },
   "contact": {
-    "badge": "Contact",
-    "title": "Entrer En",
-    "titleHighlight": "Contact",
-    "description": "Vous avez un projet en tête ou vous voulez simplement discuter? J'aimerais avoir de vos nouvelles. N'hésitez pas à me contacter via l'un des canaux ci-dessous.",
+    "badge": "Contactez-Nous",
+    "title": "Construisons Quelque Chose",
+    "titleHighlight": "d'Incroyable Ensemble",
+    "description": "Vous avez un projet en tête? Nous aimerions avoir de vos nouvelles. Contactez-nous pour discuter de la façon dont nous pouvons aider à transformer votre présence numérique.",
     "info": {
       "title": "Informations de Contact",
       "email": {
         "label": "Email",
-        "value": "votre.email@exemple.com"
+        "value": "hello@appzad.com"
       },
       "phone": {
         "label": "Téléphone",
-        "value": "+1 (555) 123-4567"
+        "value": "+91-8421145620"
       },
       "location": {
         "label": "Localisation",
-        "value": "San Francisco, CA"
+        "value": "Hyderabad, Telangana, Inde"
       },
       "social": {
-        "title": "Connectez-Vous Avec Moi"
+        "title": "Connectez-Vous Avec Nous"
       }
     },
     "form": {
-      "title": "Envoyer un Message",
-      "description": "Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.",
+      "title": "Obtenir un Devis Gratuit",
+      "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures avec une proposition détaillée.",
       "name": {
         "label": "Nom",
         "placeholder": "Votre nom"
@@ -195,27 +286,46 @@
     }
   },
   "projects": {
-    "title": "Mes Projets",
-    "subtitle": "Une collection de mes travaux récents et projets personnels",
-    "view_project": "Voir le Projet",
-    "view_code": "Voir le Code",
+    "badge": "Notre Travail",
+    "title": "Histoires de",
+    "titleHighlight": "Succès",
+    "subtitle": "Découvrez comment nous avons aidé les entreprises des industries du voyage, de la santé et de l'hôtellerie à atteindre leurs objectifs numériques",
+    "view_project": "Voir l'Étude de Cas",
+    "view_code": "Voir les Détails",
     "technologies_used": "Technologies Utilisées",
-    "no_projects": "Aucun projet trouvé"
+    "no_projects": "Aucune étude de cas trouvée",
+    "client": "Client",
+    "industry": "Industrie",
+    "duration": "Durée du Projet",
+    "challenge": "Le Défi",
+    "solution": "Notre Solution",
+    "results": "Résultats et Impact",
+    "testimonial": "Témoignage Client",
+    "allCaseStudies": "Voir Toutes les Études de Cas"
   },
   "footer": {
-    "copyright": "© 2024 Portfolio. Fait avec",
-    "tagline": "Création d'applications web modernes avec passion et technologie de pointe.",
+    "copyright": "© 2024 AppZad. Tous droits réservés.",
+    "tagline": "Agence professionnelle de développement web spécialisée dans les industries du voyage, de la santé et de l'hôtellerie.",
     "quickLinks": "Liens Rapides",
     "services": "Services",
+    "industries": "Industries",
+    "caseStudies": "Études de Cas",
+    "team": "Notre Équipe",
     "contact": "Contact",
+    "getQuote": "Obtenir un Devis",
+    "company": "Entreprise",
+    "aboutUs": "À Propos de Nous",
+    "careers": "Carrières",
+    "blog": "Blog",
+    "legal": "Légal",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation"
   },
   "schedule": {
-    "badge": "Planifier une Réunion",
-    "title": "Réserver une",
-    "titleHighlight": "Réunion",
-    "description": "Planifiez un moment pour discuter de votre projet, d'opportunités de collaboration, ou simplement pour parler de technologie.",
+    "badge": "Obtenir un Devis",
+    "title": "Demander une",
+    "titleHighlight": "Consultation Gratuite",
+    "description": "Planifiez une consultation pour discuter de vos besoins de projet, du calendrier et du budget. Nous fournirons une proposition détaillée adaptée à vos besoins.",
     "legend": {
       "available": "Disponible",
       "selected": "Sélectionné",
@@ -242,24 +352,67 @@
       "cancel": "Annuler"
     },
     "instructions": {
-      "title": "Comment Planifier:",
+      "title": "Comment ça Marche:",
       "step1": "1. Sélectionnez votre date et heure préférées dans le calendrier ci-dessus",
-      "step2": "2. Choisissez un créneau horaire disponible (affiché en vert)",
-      "step3": "3. Remplissez vos informations et les sujets spécifiques que vous souhaitez aborder",
-      "step4": "4. Vous recevrez une invitation de calendrier avec les détails de la réunion"
+      "step2": "2. Choisissez un créneau de consultation disponible (affiché en vert)",
+      "step3": "3. Fournissez les détails et les exigences de votre projet",
+      "step4": "4. Recevez une proposition détaillée dans les 24-48 heures"
     },
     "contact": {
-      "title": "Ou contactez-moi directement:",
+      "title": "Ou contactez-nous directement:",
       "email": "Email:",
+      "phone": "Téléphone:",
       "linkedin": "LinkedIn:",
       "linkedinText": "Connectez-vous sur LinkedIn"
+    },
+    "projectDetails": {
+      "title": "Détails du Projet",
+      "industry": {
+        "label": "Industrie",
+        "placeholder": "Sélectionnez votre industrie",
+        "travel": "Voyage",
+        "health": "Santé",
+        "hotel": "Hôtel",
+        "other": "Autre"
+      },
+      "budget": {
+        "label": "Budget Estimé (USD)",
+        "placeholder": "Sélectionnez votre fourchette budgétaire",
+        "small": "$5,000 - $10,000",
+        "medium": "$10,000 - $25,000",
+        "large": "$25,000 - $50,000",
+        "enterprise": "$50,000+"
+      },
+      "timeline": {
+        "label": "Calendrier",
+        "placeholder": "Quand avez-vous besoin que ce soit terminé?",
+        "urgent": "Dans 1 mois",
+        "normal": "1-3 mois",
+        "flexible": "3-6 mois",
+        "planning": "J'explore simplement les options"
+      }
     }
+  },
+  "team": {
+    "badge": "Notre Équipe",
+    "title": "Rencontrez",
+    "titleHighlight": "l'Équipe",
+    "description": "Les professionnels talentueux derrière le succès d'AppZad",
+    "leadership": "Direction",
+    "members": "Membres de l'Équipe",
+    "openPositions": "Postes Ouverts",
+    "joinTeam": "Rejoignez Notre Équipe",
+    "viewProfile": "Voir le Profil",
+    "contactMember": "Contacter"
   },
   "common": {
     "loading": "Chargement...",
     "error": "Quelque chose s'est mal passé",
     "back": "Retour",
     "next": "Suivant",
-    "previous": "Précédent"
+    "previous": "Précédent",
+    "learnMore": "En Savoir Plus",
+    "getStarted": "Commencer",
+    "viewAll": "Tout Voir"
   }
 }

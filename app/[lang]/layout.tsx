@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic';
 import { Locale } from '@/types';
 import { getTranslations, setRequestLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { Globe, Heart, Mail, Github, Linkedin, ArrowRight } from 'lucide-react';
-import resumeData from '@/data/resume.json';
+import { Globe, Heart, Mail, Github, Linkedin, ArrowRight, Twitter } from 'lucide-react';
+import companyData from '@/data/company.json';
 import '@/app/globals.css';
 
 // Dynamic imports for client components only
@@ -40,9 +40,12 @@ export default async function LocaleLayout({ children, params }: Props) {
             <nav className="relative mx-auto max-w-7xl px-6 lg:px-8">
               <div className="flex h-16 items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center">
-                  <Link href={`/${lang}`} className="flex items-center justify-center w-10 h-10 rounded-xl shadow-lg transition-transform duration-300 hover:scale-110" style={{ background: 'var(--gradient-primary)' }}>
-                    <span className="text-white font-bold text-lg">A</span>
+                <div className="flex items-center gap-2">
+                  <Link href={`/${lang}`} className="flex items-center gap-2 transition-transform duration-300 hover:scale-105">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl shadow-lg" style={{ background: 'var(--gradient-primary)' }}>
+                      <span className="text-white font-bold text-lg">A</span>
+                    </div>
+                    <span className="hidden sm:block text-xl font-bold" style={{ color: 'var(--color-text)' }}>{companyData.name}</span>
                   </Link>
                 </div>
 
@@ -88,25 +91,31 @@ export default async function LocaleLayout({ children, params }: Props) {
                     <div className="flex items-center justify-center w-10 h-10 rounded-xl shadow-lg" style={{ background: 'var(--gradient-primary)' }}>
                       <span className="text-white font-bold text-lg">A</span>
                     </div>
-                    <span className="text-xl font-bold" style={{ color: 'var(--color-text)' }}>{resumeData.personal.name.split(' ')[0]}</span>
+                    <span className="text-xl font-bold" style={{ color: 'var(--color-text)' }}>{companyData.name}</span>
                   </div>
                   <p className="text-sm mb-4" style={{ color: 'var(--color-muted)' }}>
-                    {resumeData.personal.title}
+                    {t('footer.tagline')}
                   </p>
                   <div className="flex gap-3">
-                    <a href={resumeData.personal.github} target="_blank" rel="noopener noreferrer"
+                    <a href={companyData.socialMedia.github} target="_blank" rel="noopener noreferrer"
                        className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
                        style={{ background: 'var(--gradient-secondary)' }}
                        aria-label="GitHub">
                       <Github className="w-5 h-5" style={{ color: 'var(--color-text)' }} />
                     </a>
-                    <a href={resumeData.personal.linkedin} target="_blank" rel="noopener noreferrer"
+                    <a href={companyData.socialMedia.linkedin} target="_blank" rel="noopener noreferrer"
                        className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
                        style={{ background: 'var(--gradient-secondary)' }}
                        aria-label="LinkedIn">
                       <Linkedin className="w-5 h-5" style={{ color: 'var(--color-text)' }} />
                     </a>
-                    <a href={`mailto:${resumeData.personal.email}`}
+                    <a href={companyData.socialMedia.twitter} target="_blank" rel="noopener noreferrer"
+                       className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                       style={{ background: 'var(--gradient-secondary)' }}
+                       aria-label="Twitter">
+                      <Twitter className="w-5 h-5" style={{ color: 'var(--color-text)' }} />
+                    </a>
+                    <a href={`mailto:${companyData.email}`}
                        className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
                        style={{ background: 'var(--gradient-secondary)' }}
                        aria-label="Email">
@@ -181,15 +190,15 @@ export default async function LocaleLayout({ children, params }: Props) {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--color-primary)' }} />
-                      <a href={`mailto:${resumeData.personal.email}`} className="text-sm transition-colors duration-300 hover:underline" style={{ color: 'var(--color-muted)' }}>
-                        {resumeData.personal.email}
+                      <a href={`mailto:${companyData.email}`} className="text-sm transition-colors duration-300 hover:underline" style={{ color: 'var(--color-muted)' }}>
+                        {companyData.email}
                       </a>
                     </li>
                     <li>
-                      <Link href={`/${lang}/contact`}
+                      <Link href={`/${lang}/schedule`}
                             className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
                             style={{ background: 'var(--gradient-primary)', color: 'white' }}>
-                        {t('navigation.contact')}
+                        {t('footer.getQuote')}
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </li>
@@ -199,8 +208,8 @@ export default async function LocaleLayout({ children, params }: Props) {
 
               {/* Bottom Bar */}
               <div className="pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4" style={{ borderColor: 'var(--card-border)' }}>
-                <p className="text-sm font-medium flex items-center gap-2" style={{ color: 'var(--color-muted)' }}>
-                  {t('footer.copyright')} <Heart className="w-4 h-4 text-red-500 animate-pulse" />
+                <p className="text-sm font-medium" style={{ color: 'var(--color-muted)' }}>
+                  {t('footer.copyright')}
                 </p>
                 <div className="flex items-center gap-4 text-sm" style={{ color: 'var(--color-muted)' }}>
                   <Link href={`/${lang}/privacy`} className="hover:underline transition-colors duration-300" style={{ color: 'var(--color-muted)' }}>
