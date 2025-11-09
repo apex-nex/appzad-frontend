@@ -42,7 +42,7 @@ export default function Timeline() {
                     aria-hidden="true"
                   />
                   <h4 className="font-nacelle text-xl font-semibold text-gray-200">
-                    Open PRO was founded in Milan, Italy
+                    Appzad was founded in Milan, Italy
                   </h4>
                 </div>
                 <p className="text-[1rem] text-indigo-200/65">
@@ -76,7 +76,7 @@ export default function Timeline() {
                     aria-hidden="true"
                   />
                   <h4 className="font-nacelle text-xl font-semibold text-gray-200">
-                    Launched the first Open PRO Advanced plan
+                    Launched the first Appzad Advanced plan
                   </h4>
                 </div>
                 <p className="text-[1rem] text-indigo-200/65">

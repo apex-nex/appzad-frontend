@@ -45,7 +45,7 @@ export default function PricingHome() {
                   alt="Large testimonial"
                 />
                 <p className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-xl font-semibold text-transparent">
-                  “Open PRO lives up to its name. It's incredibly easy to use
+                  “Appzad lives up to its name. It's incredibly easy to use
                   yet powerful enough to handle all my content needs
                   effortlessly. It's become an essential part of our work
                   routine.”

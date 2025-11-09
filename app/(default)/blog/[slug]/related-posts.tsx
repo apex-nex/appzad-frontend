@@ -111,7 +111,7 @@ export default function RelatedPosts() {
                 className="text-gray-200 transition hover:text-white"
                 href="#0"
               >
-                Open PRO’s new and improved reporting features
+                Appzad’s new and improved reporting features
               </Link>
             </h3>
           </header>

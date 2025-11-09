@@ -12,11 +12,11 @@ export default function HelpSidebar() {
       href: "/help/frequently-asked-questions",
     },
     {
-      name: "What is Open PRO",
+      name: "What is Appzad",
       href: "/help/what-is-open-pro",
     },
     {
-      name: "Open PRO plan’s features",
+      name: "Appzad plan’s features",
       href: "/help/open-pro-plans-features",
     },
     {

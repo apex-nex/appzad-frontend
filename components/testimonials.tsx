@@ -92,7 +92,7 @@ const testimonials = [
     name: "Danielle K.",
     company: "Forbes Inc.",
     content:
-      "I've never been a fan of complicated website AI tools, which is why Open PRO is perfect for me. Its minimalist design and simple functionality make staying organized feel like second nature.",
+      "I've never been a fan of complicated website AI tools, which is why Appzad is perfect for me. Its minimalist design and simple functionality make staying organized feel like second nature.",
     categories: [1, 4],
   },
   {

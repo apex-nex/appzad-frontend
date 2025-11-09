@@ -23,7 +23,7 @@ export default function Benefits() {
               Seeking ambitious problem solvers
             </h2>
             <p className="text-lg text-indigo-200/65">
-              At Open Pro, it's our mission to improve the quality of every
+              At Appzad, it's our mission to improve the quality of every
               thing. Helping our customers create incredible products and
               services is the end goal—but everything starts with our team.
             </p>
@@ -211,7 +211,7 @@ export default function Benefits() {
                   alt="Large testimonial"
                 />
                 <p className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-xl font-semibold text-transparent">
-                  "I am grateful to Open PRO for encouraging me to expand my
+                  "I am grateful to Appzad for encouraging me to expand my
                   horizons and strive for greater achievements, both in my
                   career and in my education."
                 </p>
