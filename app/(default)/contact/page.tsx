@@ -155,12 +155,12 @@ export default function Contact() {
               <div className="mt-8 flex w-full flex-col justify-between gap-5 md:flex-row md:items-center">
                 <p className="text-sm text-indigo-200/65">
                   By continuing, you agree to our{" "}
-                  <a className="underline hover:no-underline" href="#0">
-                    Terms of Use
+                  <a className="underline hover:no-underline" href="/terms-of-service">
+                    Terms of Service
                   </a>{" "}
                   and{" "}
-                  <a className="underline hover:no-underline" href="#0">
-                    Privacy policy
+                  <a className="underline hover:no-underline" href="/privacy-policy">
+                    Privacy Policy
                   </a>
                 </p>
                 <div>
