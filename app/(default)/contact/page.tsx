@@ -87,9 +87,10 @@ export default function Contact() {
                       <option value={"default"} disabled hidden>
                         Select a country
                       </option>
+                      <option>India</option>
                       <option>United States</option>
                       <option>United Kingdom</option>
-                      <option>Germany</option>
+                      <option>Other</option>
                     </select>
                   </div>
                 </div>
@@ -119,6 +120,7 @@ export default function Contact() {
                       <option>Security</option>
                       <option>Software</option>
                       <option>Travel</option>
+                      <option>Other</option>
                     </select>
                   </div>
                   <div className="flex-1">
