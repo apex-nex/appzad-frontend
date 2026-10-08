@@ -1,79 +1,75 @@
+import Link from "next/link";
+
+import Accordion from "@/components/accordion";
+import Section from "@/components/section";
+import { mailto, site } from "@/lib/site";
+
+const link = "font-medium text-blue-600 underline hover:text-blue-700";
+
+const faqs: { question: string; answer: React.ReactNode }[] = [
+  {
+    question: "What is AppZad?",
+    answer:
+      "AppZad is hospital management software that runs in a web browser. It covers appointments, patient registration, OP visits and prescriptions, and the setup behind them.",
+  },
+  {
+    question: "What can I manage with AppZad?",
+    answer:
+      "Doctors and their time slots, appointments, patient records, OP visits with vitals and the bill, digital prescriptions, your prescription letterhead, your hospital's details and the staff who have access.",
+  },
+  {
+    question: "Can I manage multiple doctors?",
+    answer:
+      "Yes. Add each of your doctors with their own specializations, fee and time slots. Appointments and OP visits are booked against the doctor you choose.",
+  },
+  {
+    question: "Can I manage appointments?",
+    answer:
+      "Yes. Book into a doctor's free slot, change or delete a booking, and search by patient, phone, doctor or token number. A slot that is taken cannot be booked again.",
+  },
+  {
+    question: "Can I create digital prescriptions?",
+    answer:
+      "Yes. The doctor fills in the prescription for an OP visit and downloads it as an A4 PDF with your letterhead. To write by hand, print the same sheet with the prescription area left blank.",
+  },
+  {
+    question: "How do I get started?",
+    answer: (
+      <>
+        Write to us from the{" "}
+        <Link className={link} href="/contact">
+          Contact page
+        </Link>
+        . We create your hospital's workspace and email you an invitation. Your first sign-in walks you through your
+        hospital's details, inviting staff and adding your first doctor.
+      </>
+    ),
+  },
+  {
+    question: "How do I contact support?",
+    answer: (
+      <>
+        If you already use AppZad, sign in and open Settings, then Support. You can attach a screenshot or a PDF.
+        Otherwise email us at{" "}
+        <a className={link} href={mailto}>
+          {site.contactEmail}
+        </a>
+        .
+      </>
+    ),
+  },
+];
+
 export default function Faqs() {
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="border-t border-gray-800 py-12 md:py-20 lg:border-0 lg:pt-0">
-          {/* Section header */}
-          <div className="mb-12">
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-2xl font-semibold text-transparent md:text-3xl">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          {/* Faqs */}
-          <ul className="grid gap-8 md:grid-cols-2 lg:gap-y-12 xl:gap-x-16">
-            <li>
-              <h4 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                What payment options does Appzad accept?
-              </h4>
-              <p className="text-[1rem] text-indigo-200/65">
-                Appzad accepts all major credit cards, including Visa,
-                MasterCard, American Express, and Discover, as well as PayPal
-                for added convenience.
-              </p>
-            </li>
-            <li>
-              <h4 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                Do I need to be a user to view my data?
-              </h4>
-              <p className="text-[1rem] text-indigo-200/65">
-                Yes, you must be a registered user and logged into your account
-                to access and view your data securely. This ensures your data
-                privacy and protection.
-              </p>
-            </li>
-            <li>
-              <h4 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                What if I want to cancel?
-              </h4>
-              <p className="text-[1rem] text-indigo-200/65">
-                If you wish to cancel your account, you can do so anytime
-                through the account settings page. Your cancellation will take
-                effect in no more than 7 business days.
-              </p>
-            </li>
-            <li>
-              <h4 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                What happens if I hit my usage limit?
-              </h4>
-              <p className="text-[1rem] text-indigo-200/65">
-                If you reach your usage limit, your service will be temporarily
-                paused until the start of the next billing cycle. You can
-                upgrade to a higher plan if needed.
-              </p>
-            </li>
-            <li>
-              <h4 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                Do you offer a discount for non-profits?
-              </h4>
-              <p className="text-[1rem] text-indigo-200/65">
-                Yes, we provide special discounted rates for non-profit
-                organizations. Please contact our support team with your
-                credentials to apply for the discount.
-              </p>
-            </li>
-            <li>
-              <h4 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                Will my data be private and safe?
-              </h4>
-              <p className="text-[1rem] text-indigo-200/65">
-                Yes, your data is stored securely and is protected with advanced
-                encryption methods. We follow industry-standard practices to
-                ensure your privacy and data safety.
-              </p>
-            </li>
-          </ul>
-        </div>
+    <Section title="Questions we often get">
+      <div className="space-y-2">
+        {faqs.map((faq, index) => (
+          <Accordion key={faq.question} title={faq.question} active={index === 0}>
+            {faq.answer}
+          </Accordion>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }

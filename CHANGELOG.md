@@ -1,5 +1,29 @@
 # CHANGELOG.md
 
+## [3.3.0] - 2026-07-02
+
+- Upgrade to Next.js 16.2.10 and React 19.2.7
+- Update to Tailwind 4.3.2
+- Upgrade next-mdx-remote-client to v2
+- Remove unused @next/mdx config
+- Remove unused API route
+- Add Terms and Privacy pages
+- Move AOS init into a client component to improve static rendering
+- Clean up dependencies and move types to devDependencies
+- Add ESLint and Prettier configuration with import sorting
+- Update footer to only link to real internal pages
+- Improve page metadata and titles
+- Add favicon pack and web manifest
+- Fix gradient-border mask rendering under Tailwind 4.3
+
+## [3.2.0] - 2025-12-12
+
+- Upgrade to Next.js 16.0.10 and React 19.2.3
+
+## [3.1.0] - 2025-12-06
+
+- Upgrade to Next.js 16.0.7
+
 ## [3.0.0] - 2025-02-04
 
 - Upgrade to Tailwind 4
@@ -9,22 +33,51 @@
 
 - Update dependencies + Upgrade to Next.js 15
 
-## [2.0.0] - 2024-09-11
+## [2.0.8] - 2024-08-23
+
+- Fix issue with blurred elements on iOS
+
+## [2.0.7] - 2024-08-23
+
+- Remove unneeded scroll handler
+
+## [2.0.6] - 2024-08-23
+
+- Fix hamburger button on Safari iOS
+- Minor improvements
+
+## [2.0.4] - 2024-07-31
+
+- Fix z-index issue
+
+## [2.0.3] - 2024-07-30
+
+- Fix apps page
+
+## [2.0.2] - 2024-07-09
+
+- Minor improvements
+
+## [2.0.1] - 2024-06-20
+
+- Minor styling changes
+
+## [2.0.0] - 2024-06-18
 
 - Redesign the entire template
 
-## [1.3.0] - 2024-07-05
-
-- Replace Contentlayer with MDX
-
-## [1.2.0] - 2023-12-07
+## [1.3.0] - 2023-12-07
 
 - Update Next.js to 14
 
-## [1.1.2] - 2023-10-04
+## [1.2.2] - 2023-10-04
 
 - Update Twitter icon
 - Update dependencies
+
+## [1.2.0] - 2023-06-20
+
+- Fix issue with Google Fonts
 
 ## [1.1.0] - 2023-05-06
 

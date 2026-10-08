@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AppZad website
 
-## Getting Started
+The public marketing site for AppZad (Home, Features, Contact, Privacy Policy, Terms of Service, 404). Built on the
+[Cruip](https://cruip.com) **Simple** Next.js template. The HMS itself is a separate app (`../webapp`).
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuration
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Optional, see `.env.example`. Both have production defaults in `lib/site.ts`:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Variable | Default | What it is |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | `https://www.appzad.com` | Where this site is served. Used for canonical URLs, the sitemap and Open Graph. |
+| `NEXT_PUBLIC_APP_URL` | `https://app.appzad.com` | The HMS web app. "Login" links to its `/sign-in`. Change it when the app moves to the bare domain. |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The contact email, the navigation links and the "Get Started" target are in `lib/site.ts` too.
 
-## Learn More
+## Where things are
 
-To learn more about Next.js, take a look at the following resources:
+- `app/(default)/`: the pages. `app/not-found.tsx` is the 404, `app/sitemap.ts` / `app/robots.ts` / `app/opengraph-image.tsx` are generated at build.
+- `components/features-home.tsx`: the feature list shown on Home and Features. Every line describes something the HMS does today; change the product first, then this list.
+- `content/legal/*.mdx`: the Privacy Policy and Terms of Service text. `CONTACT_EMAIL` in them is replaced with the address from `lib/site.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Building for production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+pnpm build
+```
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The template is governed by the [Cruip premium license](https://cruip.com/terms/).

@@ -1,8 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Additional styles */
-@import './additional-styles/utility-patterns.css' layer(components);
-@import './additional-styles/theme.css';
+@import "./additional-styles/utility-patterns.css" layer(components);
 
 @plugin "@tailwindcss/forms" {
   strategy: base;
@@ -13,68 +12,38 @@
 
 @theme {
   --font-inter: Inter, sans-serif;
-  --font-nacelle: Nacelle, sans-serif;
 
-  --text-xs: 0.8125rem;
-  --text-xs--line-height: 1.5384;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
   --text-sm: 0.875rem;
   --text-sm--line-height: 1.5715;
-  --text-base: 0.9375rem;
-  --text-base--line-height: 1.5333;
-  --text-base--letter-spacing: -0.0125em;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-base--letter-spacing: -0.017em;
   --text-lg: 1.125rem;
   --text-lg--line-height: 1.5;
-  --text-lg--letter-spacing: -0.0125em;
+  --text-lg--letter-spacing: -0.017em;
   --text-xl: 1.25rem;
   --text-xl--line-height: 1.5;
-  --text-xl--letter-spacing: -0.0125em;
+  --text-xl--letter-spacing: -0.017em;
   --text-2xl: 1.5rem;
   --text-2xl--line-height: 1.415;
-  --text-2xl--letter-spacing: -0.0268em;
-  --text-3xl: 1.75rem;
-  --text-3xl--line-height: 1.3571;
-  --text-3xl--letter-spacing: -0.0268em;
-  --text-4xl: 2.5rem;
-  --text-4xl--line-height: 1.1;
-  --text-4xl--letter-spacing: -0.0268em;
-  --text-5xl: 3.5rem;
+  --text-2xl--letter-spacing: -0.037em;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.3333;
+  --text-3xl--letter-spacing: -0.037em;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.2777;
+  --text-4xl--letter-spacing: -0.037em;
+  --text-5xl: 3rem;
   --text-5xl--line-height: 1;
-  --text-5xl--letter-spacing: -0.0268em;
+  --text-5xl--letter-spacing: -0.037em;
   --text-6xl: 4rem;
   --text-6xl--line-height: 1;
-  --text-6xl--letter-spacing: -0.0268em;
+  --text-6xl--letter-spacing: -0.037em;
   --text-7xl: 4.5rem;
   --text-7xl--line-height: 1;
-  --text-7xl--letter-spacing: -0.0268em;
-
-  --animate-shine: shine 5s ease-in-out 500ms infinite;
-  --animate-gradient: gradient 6s linear infinite;  
-
-  @keyframes shine {
-    0% {
-      top: 0;
-      transform: scaleY(5);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.8;
-    }
-    20% {
-      top: 100%;
-      transform: scaleY(10);
-      opacity: 0;
-    }
-    100% {
-      top: 100%;
-      transform: scaleY(1);
-      opacity: 0;
-    }
-  }
-  @keyframes gradient {
-    to {
-      background-position: 200% center;
-    }
-  }
+  --text-7xl--letter-spacing: -0.037em;
 }
 
 /*
@@ -92,5 +61,13 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* One visible keyboard focus ring for every link, button and summary. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-blue-500);
+    outline-offset: 2px;
   }
 }

@@ -1,8 +1,10 @@
+import { MDXRemote } from "next-mdx-remote-client/rsc";
 import React from "react";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import PostLink from "./link";
-import PostImage from "./image";
 import rehypePrettyCode from "rehype-pretty-code";
+
+import PostBanner from "./banner";
+import PostImage from "./image";
+import PostLink from "./link";
 
 const transformToSlug = (input: string) => {
   return input
@@ -17,18 +19,13 @@ const transformToSlug = (input: string) => {
 };
 
 const generateHeading = (headingLevel: number) => {
-  return ({ children }: { children: React.ReactNode }) => {
+  const Heading = ({ children }: { children: React.ReactNode }) => {
     const textContent = React.Children.toArray(children).join("");
     const slug = transformToSlug(textContent);
-    return React.createElement(`h${headingLevel}`, { id: slug }, [
-      React.createElement("a", {
-        href: `#${slug}`,
-        key: `link-${slug}`,
-        className: "anchor-link",
-      }),
-      textContent,
-    ]);
+    return React.createElement(`h${headingLevel}`, { id: slug }, textContent);
   };
+  Heading.displayName = `MDXHeading${headingLevel}`;
+  return Heading;
 };
 
 const mdxComponents = {
@@ -38,12 +35,12 @@ const mdxComponents = {
   h4: generateHeading(4),
   Link: PostLink,
   Image: PostImage,
+  Banner: PostBanner,
 };
 
 export function CustomMDX(props: any) {
   const rehypePrettyCodeOptions = {
     theme: "one-dark-pro",
-    keepBackground: false,
     onVisitLine(node: any) {
       // Prevent lines from collapsing in `display: grid` mode, and
       // allow empty lines to be copy/pasted

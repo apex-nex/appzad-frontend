@@ -3,15 +3,12 @@ import path from "path";
 
 type Metadata = {
   title: string;
-  summary?: string;
   publishedAt: string;
   updatedAt?: string;
-  image?: string;
+  summary?: string;
   author?: string;
   authorImg?: string;
-  authorRole?: string;
-  authorLink?: string;
-  category?: string;
+  kind?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -32,32 +29,16 @@ function parseFrontmatter(fileContent: string) {
   return { metadata: metadata as Metadata, content };
 }
 
-function getMDXFiles(dir: string) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
-}
-
 function readMDXFile(filePath: string) {
   const rawContent = fs.readFileSync(filePath, "utf-8");
   return parseFrontmatter(rawContent);
 }
 
-function getMDXData(dir: string) {
-  const mdxFiles = getMDXFiles(dir);
-  return mdxFiles.map((file) => {
-    const { metadata, content } = readMDXFile(path.join(dir, file));
-    const slug = path.basename(file, path.extname(file));
-    return {
-      metadata,
-      slug,
-      content,
-    };
-  });
-}
-
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), "content/blog"));
-}
-
-export function getHelpPages() {
-  return getMDXData(path.join(process.cwd(), "content/help"));
+export function getLegalPage(slug: string) {
+  const filePath = path.join(process.cwd(), "content/legal", `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+  const { metadata, content } = readMDXFile(filePath);
+  return { metadata, slug, content };
 }

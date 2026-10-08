@@ -1,10 +1,7 @@
-const withMDX = require("@next/mdx")();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX files
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  // Optionally, add any other Next.js config below
+  // MDX content is loaded at runtime via `next-mdx-remote-client`
+  // (see components/mdx), so no MDX webpack/turbopack loader is needed here.
 };
 
-module.exports = withMDX(nextConfig);
+module.exports = nextConfig;
