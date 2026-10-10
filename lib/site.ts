@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
 // The facts every page repeats, in one place.
-
-// The HMS web app, where "Login" goes. It is served at app.appzad.com today; set NEXT_PUBLIC_APP_URL
-// when it moves to the bare domain. This marketing site is served on www.
-const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.appzad.com";
+// The HMS web app, where "Login" goes: the one login address (login.appzad.com); set NEXT_PUBLIC_APP_URL to change
+// it. This marketing site is served on www.
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://login.appzad.com";
 
 export const site = {
   name: "AppZad",

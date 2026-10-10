@@ -19,7 +19,7 @@ Optional, see `.env.example`. Both have production defaults in `lib/site.ts`:
 | Variable | Default | What it is |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://www.appzad.com` | Where this site is served. Used for canonical URLs, the sitemap and Open Graph. |
-| `NEXT_PUBLIC_APP_URL` | `https://app.appzad.com` | The HMS web app. "Login" links to its `/sign-in`. Change it when the app moves to the bare domain. |
+| `NEXT_PUBLIC_APP_URL` | `https://login.appzad.com` | The HMS web app. "Login" links to its `/sign-in`. The single login address; hospitals live at `{slug}.appzad.com` after sign-in. |
 
 The contact email, the navigation links and the "Get Started" target are in `lib/site.ts` too.
 
